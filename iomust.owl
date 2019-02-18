@@ -1,0 +1,365 @@
+@prefix : <http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/> .
+@prefix co: <http://purl.org/co#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix iot: <http://www.semanticweb.org/francesco/ontologies/2019/1/iot/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov-o#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix music: <http://purl.org/ontology/mo/> .
+@base <http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust> .
+
+<http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust> rdf:type owl:Ontology ;
+                                                                     dc:creator "Francesco Antoniazzi" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/co#elementOf
+co:elementOf rdf:type owl:ObjectProperty ;
+             rdfs:domain iot:Thing ,
+                         :MusicalThing ,
+                         :StageEquipmentThing ;
+             rdfs:range co:Collection ,
+                        :StageEquipment ;
+             rdfs:seeAlso "http://purl.org/co#d4e81" .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/isInvolvedIn
+iot:isInvolvedIn rdf:type owl:ObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( iot:Thing
+                                             foaf:Agent
+                                           )
+                             ] ;
+                 rdfs:range iot:Application .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/runs
+:runs rdf:type owl:ObjectProperty ;
+      rdfs:domain iot:SmartThing ,
+                  iot:Thing ;
+      rdfs:range prov:SoftwareAgent ;
+      rdfs:comment "A SmartThing with embedded computational power can run software." .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/atLocation
+:atLocation rdf:type owl:DatatypeProperty ;
+            rdfs:domain iot:Thing ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Location description as human-interpretable string" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/co#Collection
+co:Collection rdf:type owl:Class .
+
+
+###  http://purl.org/ontology/mo/Composer
+music:Composer rdf:type owl:Class ;
+               rdfs:subClassOf foaf:Agent ,
+                               [ rdf:type owl:Class ;
+                                 owl:unionOf ( iot:Thing
+                                               foaf:Agent
+                                             )
+                               ] .
+
+
+###  http://purl.org/ontology/mo/Instrument
+music:Instrument rdf:type owl:Class ;
+                 rdfs:subClassOf iot:Thing .
+
+
+###  http://purl.org/ontology/mo/Listener
+music:Listener rdf:type owl:Class ;
+               rdfs:subClassOf foaf:Agent ,
+                               [ rdf:type owl:Class ;
+                                 owl:unionOf ( iot:Thing
+                                               foaf:Agent
+                                             )
+                               ] .
+
+
+###  http://purl.org/ontology/mo/MusicArtist
+music:MusicArtist rdf:type owl:Class ;
+                  rdfs:subClassOf foaf:Agent ,
+                                  [ rdf:type owl:Class ;
+                                    owl:unionOf ( iot:Thing
+                                                  foaf:Agent
+                                                )
+                                  ] .
+
+
+###  http://purl.org/ontology/mo/Performer
+music:Performer rdf:type owl:Class ;
+                rdfs:subClassOf foaf:Agent ,
+                                [ rdf:type owl:Class ;
+                                  owl:unionOf ( iot:Thing
+                                                foaf:Agent
+                                              )
+                                ] .
+
+
+###  http://purl.org/ontology/mo/SoundEngineer
+music:SoundEngineer rdf:type owl:Class ;
+                    rdfs:subClassOf foaf:Agent ,
+                                    [ rdf:type owl:Class ;
+                                      owl:unionOf ( iot:Thing
+                                                    foaf:Agent
+                                                  )
+                                    ] .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/Application
+iot:Application rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/SmartThing
+iot:SmartThing rdf:type owl:Class ;
+               rdfs:subClassOf iot:Thing ;
+               rdfs:comment "A SmartThing is an object that has a special technological feature included that makes it different from a basic implementation, so that it is able to make unexpected things. A smartphone, a smart car, a smart chair..." .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/Thing
+iot:Thing rdf:type owl:Class ;
+          rdfs:comment "Any kind of object living in an environment. A T-Shirt, a person, a computer, a guitar..." .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/Wearable
+iot:Wearable rdf:type owl:Class ;
+             rdfs:subClassOf iot:Thing ;
+             rdfs:comment "Any object that a human can put on his body, like a T-Shirt or a Pacemaker" .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/Analyzer
+:Analyzer rdf:type owl:Class ;
+          rdfs:subClassOf prov:SoftwareAgent .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/Generator
+:Generator rdf:type owl:Class ;
+           rdfs:subClassOf prov:SoftwareAgent .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/MusicalThing
+:MusicalThing rdf:type owl:Class ;
+              rdfs:subClassOf iot:Thing ;
+              rdfs:comment "A thing used to produce or enjoy music, within its context. A violin is a musical thing in a concert hall, but it is not if it is exposed in a museum." .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/MusicalThingApplication
+:MusicalThingApplication rdf:type owl:Class ;
+                         owl:equivalentClass [ owl:intersectionOf ( iot:Application
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty iot:isInvolvedIn ;
+                                                                      owl:someValuesFrom :MusicalThing
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:subClassOf iot:Application ,
+                                         [ owl:intersectionOf ( iot:Application
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty iot:isInvolvedIn ;
+                                                                  owl:someValuesFrom :MusicalThing
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty iot:isInvolvedIn ;
+                                           owl:someValuesFrom :MusicalThing
+                                         ] .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/SmartInstrument
+:SmartInstrument rdf:type owl:Class ;
+                 owl:equivalentClass [ owl:intersectionOf ( music:Instrument
+                                                            :SmartMusicalThing
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                 rdfs:subClassOf :MusicalThing ,
+                                 :SmartMusicalThing ,
+                                 [ owl:intersectionOf ( music:Instrument
+                                                        :SmartMusicalThing
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ,
+                                 [ owl:intersectionOf ( iot:SmartThing
+                                                        iot:Thing
+                                                        :MusicalThing
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/SmartMusicalThing
+:SmartMusicalThing rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( iot:SmartThing
+                                                              iot:Thing
+                                                              :MusicalThing
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf iot:Thing ,
+                                   :MusicalThing ,
+                                   [ owl:intersectionOf ( iot:SmartThing
+                                                          iot:Thing
+                                                          :MusicalThing
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+                   rdfs:comment "Example of Usage of the concept of smart musical thing" .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/StageEquipment
+:StageEquipment rdf:type owl:Class ;
+                rdfs:subClassOf co:Collection .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/StageEquipmentThing
+:StageEquipmentThing rdf:type owl:Class ;
+                     rdfs:subClassOf iot:Thing ,
+                                     :MusicalThing ;
+                     rdfs:comment "A musical thing belonging to the equipment needed on stage." .
+
+
+###  http://www.w3.org/ns/prov-o#SoftwareAgent
+prov:SoftwareAgent rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Class ;
+                             owl:unionOf ( iot:Thing
+                                           foaf:Agent
+                                         )
+                           ] .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ owl:intersectionOf ( music:Instrument
+                       :SmartMusicalThing
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf :MusicalThing
+] .
+
+
+[ owl:intersectionOf ( music:Instrument
+                       :SmartMusicalThing
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf :SmartInstrument
+] .
+
+
+[ owl:intersectionOf ( music:Instrument
+                       :SmartMusicalThing
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf :SmartMusicalThing
+] .
+
+
+[ owl:intersectionOf ( music:Instrument
+                       :SmartMusicalThing
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ owl:intersectionOf ( iot:SmartThing
+                                         iot:Thing
+                                         :MusicalThing
+                                       ) ;
+                    rdf:type owl:Class
+                  ]
+] .
+
+
+[ owl:intersectionOf ( iot:Application
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty iot:isInvolvedIn ;
+                         owl:someValuesFrom :MusicalThing
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf iot:Application
+] .
+
+
+[ owl:intersectionOf ( iot:Application
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty iot:isInvolvedIn ;
+                         owl:someValuesFrom :MusicalThing
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf :MusicalThingApplication
+] .
+
+
+[ owl:intersectionOf ( iot:Application
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty iot:isInvolvedIn ;
+                         owl:someValuesFrom :MusicalThing
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    owl:onProperty iot:isInvolvedIn ;
+                    owl:someValuesFrom :MusicalThing
+                  ]
+] .
+
+
+[ owl:intersectionOf ( iot:SmartThing
+                       iot:Thing
+                       :MusicalThing
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf iot:Thing
+] .
+
+
+[ owl:intersectionOf ( iot:SmartThing
+                       iot:Thing
+                       :MusicalThing
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf :MusicalThing
+] .
+
+
+[ owl:intersectionOf ( iot:SmartThing
+                       iot:Thing
+                       :MusicalThing
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf :SmartMusicalThing
+] .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
