@@ -34,7 +34,7 @@ dc:creator rdf:type owl:AnnotationProperty .
 co:elementOf rdf:type owl:ObjectProperty ;
              rdfs:domain iot:Thing ,
                          :MusicalThing ,
-                         :StageEquipmentThing ;
+                         :StageEquipmentDevice ;
              rdfs:range co:Collection ,
                         :StageEquipment ;
              rdfs:seeAlso "http://purl.org/co#d4e81" .
@@ -262,11 +262,11 @@ iot:Wearable rdf:type owl:Class ;
                 rdfs:subClassOf co:Collection .
 
 
-###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/StageEquipmentThing
-:StageEquipmentThing rdf:type owl:Class ;
-                     rdfs:subClassOf iot:Thing ,
-                                     :MusicalThing ;
-                     rdfs:comment "A musical thing belonging to the equipment needed on stage." .
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/StageEquipmentDevice
+:StageEquipmentDevice rdf:type owl:Class ;
+                      rdfs:subClassOf iot:Thing ,
+                                      :MusicalThing ;
+                      rdfs:comment "A musical thing belonging to the equipment needed on stage." .
 
 
 ###  http://www.w3.org/ns/prov-o#SoftwareAgent
