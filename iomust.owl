@@ -10,7 +10,9 @@
 @prefix prov: <http://www.w3.org/ns/prov-o#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
 @prefix music: <http://purl.org/ontology/mo/> .
+@prefix timeline: <http://purl.org/NET/c4dm/timeline.owl#> .
 @base <http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust> .
 
 <http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust> rdf:type owl:Ontology ;
@@ -45,7 +47,23 @@ iot:isInvolvedIn rdf:type owl:ObjectProperty ;
                                              foaf:Agent
                                            )
                              ] ;
-                 rdfs:range iot:Application .
+                 rdfs:range iot:Application ;
+                 rdfs:comment "Have a significant part into an application. May it be active, or passive. Subproperties can be spawned from here, to better specify the involvement." .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/owns
+iot:owns rdf:type owl:ObjectProperty ;
+         rdfs:domain foaf:Agent ;
+         rdfs:range iot:Thing ;
+         rdfs:comment "Ownership relation, from the generic agent to the generic thing." .
+
+
+###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/responsibleFor
+iot:responsibleFor rdf:type owl:ObjectProperty ;
+                   rdfs:domain iot:Application ;
+                   rdfs:range event:Event ;
+                   rdfs:comment "The collaboration of Things and Agents into the Application produces Events, which are described within their own ontology, and connected to their own agents, factors and so on." ;
+                   rdfs:seeAlso "http://motools.sourceforge.net/event/event.html" .
 
 
 ###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/iomust/runs
@@ -70,6 +88,11 @@ iot:isInvolvedIn rdf:type owl:ObjectProperty ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://purl.org/NET/c4dm/event.owl#Event
+event:Event rdf:type owl:Class ;
+            rdfs:seeAlso "http://motools.sourceforge.net/event/event.html" .
+
 
 ###  http://purl.org/co#Collection
 co:Collection rdf:type owl:Class .
@@ -131,7 +154,8 @@ music:SoundEngineer rdf:type owl:Class ;
 
 
 ###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/Application
-iot:Application rdf:type owl:Class .
+iot:Application rdf:type owl:Class ;
+                rdfs:comment "IoT devices and Agents are involved/collaborate into an Application" .
 
 
 ###  http://www.semanticweb.org/francesco/ontologies/2019/1/iot/SmartThing
