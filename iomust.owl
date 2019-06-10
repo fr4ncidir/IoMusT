@@ -118,6 +118,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:comment>Inverse of iot:hasConnection</rdfs:comment>
     </owl:ObjectProperty>
     
 
