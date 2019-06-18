@@ -77,7 +77,7 @@ See point 4.
 11 object properties; 4 datatype properties.
 
 10. **Axiom pattern (MUST)**
-151 axioms included (of which 66 logical axioms, 37 declaration axioms, 10 SubClassOf, 6 EquivalentClasses, 1 DisjointClasses, 6 hidden GCI, 6 InverseObjectProperties, 2 FunctionalObjectProperties, 1 Inverse Functional, 4 Asymmetric Object Properties, 4 Irreflexive, 11 ObjectPropertyDomain and Range, 3 Functional DataProperty, 4 DP domain and range, 48 annotation assertions)
+157 axioms included (of which 68 logical axioms, 39 declaration axioms, 12 SubClassOf, 6 EquivalentClasses, 1 DisjointClasses, 6 hidden GCI, 5 InverseObjectProperties, 2 FunctionalObjectProperties, 1 Inverse Functional, 4 Asymmetric Object Properties, 4 Irreflexive, 11 ObjectPropertyDomain and Range, 3 Functional DataProperty, 4 DP domain and range, 48 annotation assertions)
 
 11. **Deferencable URI (OPTIONAL)** 
 It is possible to use deferencable URIs, but no assumption on this is made in the ontology.
