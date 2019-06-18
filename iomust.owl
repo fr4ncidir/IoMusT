@@ -393,6 +393,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/InteractiveApplication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/InteractiveApplication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application"/>
+        <rdfs:comment>An IoT application that is interactive (i.e., directly communicates with the user)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/LearningApplication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/LearningApplication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application"/>
+        <rdfs:comment>An application devoted to learning of some kind of concept, technology, art...</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/SmartThing -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/SmartThing">
