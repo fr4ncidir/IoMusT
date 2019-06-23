@@ -1,0 +1,398 @@
+@prefix : <http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things#> .
+@prefix co: <http://purl.org/co#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix iot: <http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+@prefix music: <http://purl.org/ontology/mo/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix iomust: <http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/> .
+@prefix timeline: <http://purl.org/NET/c4dm/timeline.owl#> .
+@base <http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things> .
+
+<http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things> rdf:type owl:Ontology ;
+                                                                       owl:versionIRI iot: ;
+                                                                       dc:creator "Francesco Antoniazzi" ;
+                                                                       terms:title "Internet of Musical Things Ontology (IMTO)" ;
+                                                                       terms:created "2019-06-10T10:00:00"^^xsd:dateTime ;
+                                                                       rdfs:seeAlso "https://github.com/fr4ncidir/IoMusT"^^xsd:anyURI ;
+                                                                       dc:rights <https://www.gnu.org/licenses/gpl.html> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+dc:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+terms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/co#elementOf
+co:elementOf rdf:type owl:ObjectProperty ,
+                      owl:IrreflexiveProperty ;
+             rdfs:domain owl:Thing ;
+             rdfs:range co:Collection ;
+             rdfs:comment "This object property connects elements to their collection." ;
+             rdfs:seeAlso "http://purl.org/co#d4e81"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/belongsTo
+iot:belongsTo rdf:type owl:ObjectProperty ;
+              owl:inverseOf iot:owns ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:domain iot:Thing ;
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( prov:Agent
+                                         foaf:Agent
+                                       )
+                         ] ;
+              rdfs:comment "Belonging relationship, inverse of ownership" .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/connects
+iot:connects rdf:type owl:ObjectProperty ;
+             owl:inverseOf iot:hasConnection ;
+             rdfs:domain iot:Connection ;
+             rdfs:range [ rdf:type owl:Class ;
+                          owl:unionOf ( iot:ConnectedThing
+                                        iot:Thing
+                                      )
+                        ] ;
+             rdfs:comment "Inverse of iot:hasConnection" .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasConnection
+iot:hasConnection rdf:type owl:ObjectProperty ,
+                           owl:AsymmetricProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( iot:ConnectedThing
+                                              iot:Thing
+                                            )
+                              ] ;
+                  rdfs:range iot:Connection ;
+                  rdfs:comment "A connected thing points to the connection through this property" .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/involves
+iot:involves rdf:type owl:ObjectProperty ;
+             owl:inverseOf iot:isInvolvedIn ;
+             rdf:type owl:AsymmetricProperty ,
+                      owl:IrreflexiveProperty ;
+             rdfs:domain iot:Application ;
+             rdfs:range [ rdf:type owl:Class ;
+                          owl:unionOf ( iot:Thing
+                                        prov:Agent
+                                        foaf:Agent
+                                      )
+                        ] ;
+             rdfs:comment "An application involves in the process things and agents (in the broader definition)" ;
+             rdfs:seeAlso iot:isInvolvedIn .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/isInvolvedIn
+iot:isInvolvedIn rdf:type owl:ObjectProperty ,
+                          owl:AsymmetricProperty ,
+                          owl:IrreflexiveProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( iot:Thing
+                                             prov:Agent
+                                             foaf:Agent
+                                           )
+                             ] ;
+                 rdfs:range iot:Application ;
+                 rdfs:comment "Inverse of involves." ;
+                 rdfs:seeAlso iot:involves .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/isProducedBy
+iot:isProducedBy rdf:type owl:ObjectProperty ;
+                 owl:inverseOf iot:produces ;
+                 rdf:type owl:InverseFunctionalProperty ;
+                 rdfs:domain event:Event ;
+                 rdfs:range iot:Application ;
+                 rdfs:comment "An application produces some effects on the environment, inverse of iot:produces." ;
+                 rdfs:seeAlso iot:produces .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/owns
+iot:owns rdf:type owl:ObjectProperty ,
+                  owl:AsymmetricProperty ,
+                  owl:IrreflexiveProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( prov:Agent
+                                     foaf:Agent
+                                   )
+                     ] ;
+         rdfs:range iot:Thing ;
+         rdfs:comment "Ownership relationship" .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/produces
+iot:produces rdf:type owl:ObjectProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain iot:Application ;
+             rdfs:range event:Event ;
+             rdfs:comment "An application produces some effects on the environment." ;
+             rdfs:seeAlso iot:isProducedBy .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/runs
+iot:runs rdf:type owl:ObjectProperty ;
+         owl:inverseOf iot:runsOn ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( iot:SmartThing
+                                     iot:Thing
+                                   )
+                     ] ;
+         rdfs:range prov:SoftwareAgent ;
+         rdfs:comment "Smart things may be able to run software" ;
+         rdfs:seeAlso iot:runsOn .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/runsOn
+iot:runsOn rdf:type owl:ObjectProperty ;
+           rdfs:domain prov:SoftwareAgent ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( iot:SmartThing
+                                      iot:Thing
+                                    )
+                      ] ;
+           rdfs:comment "Software runs on smart things" ;
+           rdfs:seeAlso iot:runs .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/atLocation
+iot:atLocation rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain iot:Thing ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "General location indication for things" .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasBrand
+iot:hasBrand rdf:type owl:DatatypeProperty ;
+             rdfs:domain iot:Thing ;
+             rdfs:range rdfs:Literal ;
+             rdfs:comment "Brand name, like FIAT, Ducati, Boeing, Gibson, Stradivari, and so on..." .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasModel
+iot:hasModel rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain iot:Thing ;
+             rdfs:range rdfs:Literal ;
+             rdfs:comment "Model name of the actual implementation." .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasVersion
+iot:hasVersion rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain iot:Thing ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "Version numbering of the actual implementation" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/NET/c4dm/event.owl#Event
+event:Event rdf:type owl:Class ;
+            rdfs:comment "Citing from the ontology website, An arbitrary classification of a space/time region, by a cognitive agent. An event may have actively participating agents, passive factors, products, and a location in space/time." ;
+            rdfs:seeAlso <http://motools.sourceforge.net/event/event.html> .
+
+
+###  http://purl.org/co#Collection
+co:Collection rdf:type owl:Class ;
+              rdfs:comment "Ciccarese, P., & Peroni, S. (2014). The Collections Ontology: creating and handling collections in OWL 2 DL frameworks. Semantic Web, 5(6), 515-529." .
+
+
+###  http://purl.org/ontology/mo/Instrument
+music:Instrument rdf:type owl:Class ;
+                 rdfs:comment "Citing the Music ontology web page: Any of various devices or contrivances that can be used to produce musical tones or sound. Any taxonomy can be used to subsume this concept. The default one is one extracted by Ivan Herman from the Musicbrainz instrument taxonomy, conforming to SKOS. This concept holds a seeAlso link towards this taxonomy." ;
+                 rdfs:seeAlso "http://musicontology.com/specification/"^^xsd:anyURI .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application
+iot:Application rdf:type owl:Class ;
+                rdfs:comment "The semantic endpoint tagging together all elements, items and agents involved in an activity." .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/ConnectedThing
+iot:ConnectedThing rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( iot:Thing
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty iot:hasConnection ;
+                                                                owl:someValuesFrom iot:Connection
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf iot:Thing ;
+                   rdfs:comment "Any thing connected to a communication network." ;
+                   rdfs:seeAlso iot:Connection .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Connection
+iot:Connection rdf:type owl:Class ;
+               rdfs:comment "Any connection that allow communication from a thing to another." .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/InteractiveApplication
+iot:InteractiveApplication rdf:type owl:Class ;
+                           rdfs:subClassOf iot:Application ;
+                           rdfs:comment "An IoT application that is interactive (i.e., directly communicates with the user)" .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/LearningApplication
+iot:LearningApplication rdf:type owl:Class ;
+                        rdfs:subClassOf iot:Application ;
+                        rdfs:comment "An application devoted to learning of some kind of concept, technology, art..." .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/SmartThing
+iot:SmartThing rdf:type owl:Class ;
+               rdfs:subClassOf iot:Thing ;
+               rdfs:comment "Smart things, e.g., a smartphone, a smart TV, include special technological  features  or artifacts that provide them with relevant added value over the basic version of the same object." .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing
+iot:Thing rdf:type owl:Class ;
+          rdfs:comment "Any physical object relevant from a user or application perspective." .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/WearableThing
+iot:WearableThing rdf:type owl:Class ;
+                  rdfs:subClassOf iot:Thing ;
+                  rdfs:comment "Any wearable object." .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThing
+iomust:MusicalThing rdf:type owl:Class ;
+                    rdfs:subClassOf iot:Thing ;
+                    rdfs:comment "A thing used to produce or enjoy music, with reference to its context." .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThingApplication
+iomust:MusicalThingApplication rdf:type owl:Class ;
+                               owl:equivalentClass [ owl:intersectionOf ( iot:Application
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty iot:involves ;
+                                                                            owl:someValuesFrom iomust:MusicalThing
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ] ;
+                               rdfs:subClassOf iot:Application ;
+                               rdfs:comment "If an iot:Application instance is also connected  through iot:isInvolvedIn to an instance of a class belonging to the Music Ontology, or to the iomust namespace, then it is also an instance of iomust:MusicalThingApplication." .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/SmartInstrument
+iomust:SmartInstrument rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( music:Instrument
+                                                                  iot:SmartThing
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:subClassOf iomust:MusicalThing ;
+                       rdfs:comment "A smart musical thing that is also an instrument, in the sense given by the Music Ontology" ;
+                       rdfs:seeAlso music:Instrument .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/SmartMusicalThing
+iomust:SmartMusicalThing rdf:type owl:Class ;
+                         owl:equivalentClass [ owl:intersectionOf ( iot:SmartThing
+                                                                    iomust:MusicalThing
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ] ;
+                         rdfs:subClassOf iomust:MusicalThing ;
+                         rdfs:comment "A musical thing that is also a smart thing." .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/StageEquipment
+iomust:StageEquipment rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( co:Collection
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty co:elementOf ;
+                                                                   owl:someValuesFrom iomust:MusicalThing
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf co:Collection ;
+                      rdfs:comment "A collection of musical things serving as equipment. The definition of collection can be extracted from external ontologies designed ad hoc for this, like the collection ontology by Ciccarese et al." ;
+                      rdfs:seeAlso co:Collection .
+
+
+###  http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/WearableMusicalThing
+iomust:WearableMusicalThing rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( iot:WearableThing
+                                                                       iomust:MusicalThing
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] ;
+                            rdfs:subClassOf iomust:MusicalThing ;
+                            rdfs:comment "A musical thing that is also wearable" .
+
+
+###  http://www.w3.org/ns/prov#Agent
+prov:Agent rdf:type owl:Class ;
+           rdfs:comment "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity." ;
+           rdfs:seeAlso <https://www.w3.org/TR/prov-o/> .
+
+
+###  http://www.w3.org/ns/prov#SoftwareAgent
+prov:SoftwareAgent rdf:type owl:Class ;
+                   rdfs:subClassOf prov:Agent ;
+                   rdfs:comment "Citing the ontology website: A software agent is running software." ;
+                   rdfs:seeAlso <https://www.w3.org/TR/prov-o/> .
+
+
+###  http://xmlns.com/foaf/0.1/Agent
+foaf:Agent rdf:type owl:Class ;
+           rdfs:comment "The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group. The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots." ;
+           rdfs:seeAlso <http://xmlns.com/foaf/spec/> .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( event:Event
+                co:Collection
+                iot:Application
+                iot:Connection
+                iot:Thing
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
