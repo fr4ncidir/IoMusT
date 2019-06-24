@@ -21,6 +21,7 @@
                                                                        owl:versionIRI iot: ;
                                                                        dc:creator "Francesco Antoniazzi" ;
                                                                        terms:title "Internet of Musical Things Ontology (IMTO)" ;
+                                                                       dc:contributor "Gyorgy Fazekas" ;
                                                                        terms:created "2019-06-10T10:00:00"^^xsd:dateTime ;
                                                                        rdfs:seeAlso "https://github.com/fr4ncidir/IoMusT"^^xsd:anyURI ;
                                                                        dc:rights <https://www.gnu.org/licenses/gpl.html> .
@@ -28,6 +29,10 @@
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/elements/1.1/creator
 dc:creator rdf:type owl:AnnotationProperty .

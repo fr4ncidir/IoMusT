@@ -21,6 +21,7 @@
         <owl:versionIRI rdf:resource="http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/0.1"/>
         <dc:creator>Francesco Antoniazzi</dc:creator>
         <terms:title>Internet of Musical Things Ontology (IMTO)</terms:title>
+        <dc:contributor>Gyorgy Fazekas</dc:contributor>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-10T10:00:00</terms:created>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/fr4ncidir/IoMusT</rdfs:seeAlso>
         <dc:rights rdf:resource="https://www.gnu.org/licenses/gpl.html"/>
@@ -36,6 +37,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
     
 
 
