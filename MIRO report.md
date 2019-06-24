@@ -55,7 +55,7 @@ it uses a reduced subset of OWL 2 capabilities, being the Description Logic ALCR
 Protégé v5.5.0beta.
 
 3. **Ontology metrics (SHOULD)**
-Number of classes: 19; number of object properties: 11; number of data properties: 4; 0 individuals.
+Number of classes: 21; number of object properties: 11; number of data properties: 4; 0 individuals.
 Inverse popularity
 
 4. **Incorporation of other ontologies (MUST)**
@@ -77,7 +77,7 @@ See point 4.
 11 object properties; 4 datatype properties.
 
 10. **Axiom pattern (MUST)**
-157 axioms included (of which 68 logical axioms, 39 declaration axioms, 12 SubClassOf, 6 EquivalentClasses, 1 DisjointClasses, 6 hidden GCI, 5 InverseObjectProperties, 2 FunctionalObjectProperties, 1 Inverse Functional, 4 Asymmetric Object Properties, 4 Irreflexive, 11 ObjectPropertyDomain and Range, 3 Functional DataProperty, 4 DP domain and range, 48 annotation assertions)
+158 axioms included (of which 68 logical axioms, 40 declaration axioms, 12 SubClassOf, 6 EquivalentClasses, 1 DisjointClasses, 6 hidden GCI, 5 InverseObjectProperties, 2 FunctionalObjectProperties, 1 Inverse Functional, 4 Asymmetric Object Properties, 4 Irreflexive, 11 ObjectPropertyDomain and Range, 3 Functional DataProperty, 4 DP domain and range, 50 annotation assertions)
 
 11. **Deferencable URI (OPTIONAL)** 
 It is possible to use deferencable URIs, but no assumption on this is made in the ontology.
