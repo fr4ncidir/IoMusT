@@ -1,5 +1,7 @@
 # The IoMusT Ontology
 
+Have a look to the [documentation](https://fr4ncidir.github.io/IoMusT/) .
+
 This repository refers to the ontology for the Internet of Musical Things (IoMusT). The IoMusT is an emerging research area that consists of the extension of the Internet of Things paradigm to the music domain.
 More information about the IoMusT can be found on the following publications:
 
