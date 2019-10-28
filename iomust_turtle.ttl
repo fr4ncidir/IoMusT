@@ -20,10 +20,10 @@
 <http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things> rdf:type owl:Ontology ;
                                                                        owl:versionIRI iot: ;
                                                                        dc:creator "Francesco Antoniazzi" ;
-                                                                       terms:title "Internet of Musical Things Ontology (IMTO)" ;
                                                                        dc:contributor "Gyorgy Fazekas" ;
                                                                        terms:created "2019-06-10T10:00:00"^^xsd:dateTime ;
                                                                        rdfs:seeAlso "https://github.com/fr4ncidir/IoMusT"^^xsd:anyURI ;
+                                                                       terms:title "Internet of Musical Things Ontology (IoMusT)" ;
                                                                        dc:rights <https://www.gnu.org/licenses/gpl.html> .
 
 #################################################################
