@@ -4,7 +4,7 @@
     "languages" : [ "undefined" ],
     "baseIris" : [ "http://purl.org/co", "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things", "http://purl.org/NET/c4dm/event.owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://purl.org/ontology/mo", "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1" ],
     "title" : {
-      "undefined" : "Internet of Musical Things Ontology (IMTO)"
+      "undefined" : "Internet of Musical Things Ontology (IoMusT)"
     },
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
     "author" : [ "Francesco Antoniazzi" ],
@@ -36,7 +36,7 @@
       "title" : [ {
         "identifier" : "title",
         "language" : "undefined",
-        "value" : "Internet of Musical Things Ontology (IMTO)",
+        "value" : "Internet of Musical Things Ontology (IoMusT)",
         "type" : "label"
       } ],
       "seeAlso" : [ {
@@ -49,19 +49,19 @@
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "6",
-    "type" : "owl:Class"
-  }, {
-    "id" : "10",
+    "id" : "7",
     "type" : "owl:Class"
   }, {
     "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
     "type" : "owl:Class"
   }, {
     "id" : "26",
@@ -76,22 +76,22 @@
     "id" : "30",
     "type" : "owl:Thing"
   }, {
-    "id" : "31",
+    "id" : "1",
     "type" : "owl:intersectionOf"
   }, {
     "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "37",
+    "id" : "36",
     "type" : "rdfs:Literal"
   }, {
     "id" : "25",
     "type" : "owl:unionOf"
   }, {
-    "id" : "40",
+    "id" : "39",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "8",
+    "id" : "9",
     "type" : "owl:unionOf"
   }, {
     "id" : "41",
@@ -106,28 +106,28 @@
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "40",
     "type" : "owl:Class"
   }, {
     "id" : "45",
     "type" : "owl:unionOf"
   }, {
-    "id" : "1",
+    "id" : "5",
     "type" : "owl:Class"
   }, {
     "id" : "46",
     "type" : "owl:unionOf"
   }, {
-    "id" : "33",
-    "type" : "owl:Class"
-  }, {
-    "id" : "13",
+    "id" : "14",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "34",
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
     "type" : "owl:unionOf"
   }, {
-    "id" : "44",
+    "id" : "43",
     "type" : "owl:intersectionOf"
   }, {
     "id" : "22",
@@ -139,7 +139,7 @@
     "id" : "24",
     "type" : "owl:Class"
   }, {
-    "id" : "39",
+    "id" : "38",
     "type" : "owl:Class"
   }, {
     "id" : "54",
@@ -167,7 +167,7 @@
       "undefined" : "The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group. The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots."
     },
     "attributes" : [ "external" ],
-    "id" : "6"
+    "id" : "7"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/InteractiveApplication",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
@@ -179,8 +179,8 @@
       "undefined" : "An IoT application that is interactive (i.e., directly communicates with the user)"
     },
     "attributes" : [ "external" ],
-    "id" : "10",
-    "superClasses" : [ "9" ]
+    "id" : "11",
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "http://purl.org/NET/c4dm/event.owl#Event",
     "baseIri" : "http://purl.org/NET/c4dm/event.owl",
@@ -200,7 +200,7 @@
       "undefined" : "Citing from the ontology website, An arbitrary classification of a space/time region, by a cognitive agent. An event may have actively participating agents, passive factors, products, and a location in space/time."
     },
     "attributes" : [ "external" ],
-    "id" : "11"
+    "id" : "12"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
@@ -208,12 +208,12 @@
     "label" : {
       "IRI-based" : "Application"
     },
-    "subClasses" : [ "12", "10", "13" ],
+    "subClasses" : [ "13", "11", "14" ],
     "comment" : {
       "undefined" : "The semantic endpoint tagging together all elements, items and agents involved in an activity."
     },
     "attributes" : [ "external" ],
-    "id" : "9"
+    "id" : "10"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/LearningApplication",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
@@ -225,8 +225,8 @@
       "undefined" : "An application devoted to learning of some kind of concept, technology, art..."
     },
     "attributes" : [ "external" ],
-    "id" : "12",
-    "superClasses" : [ "9" ]
+    "id" : "13",
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
@@ -250,13 +250,13 @@
     "label" : {
       "IRI-based" : "WearableMusicalThing"
     },
-    "intersection" : [ "18", "15" ],
+    "intersection" : [ "18", "2" ],
     "comment" : {
       "undefined" : "A musical thing that is also wearable"
     },
     "attributes" : [ "intersection", "external" ],
     "id" : "29",
-    "superClasses" : [ "15" ]
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
@@ -271,13 +271,13 @@
     "label" : {
       "IRI-based" : "SmartMusicalThing"
     },
-    "intersection" : [ "24", "15" ],
+    "intersection" : [ "24", "2" ],
     "comment" : {
       "undefined" : "A musical thing that is also a smart thing."
     },
     "attributes" : [ "intersection", "external" ],
-    "id" : "31",
-    "superClasses" : [ "15" ]
+    "id" : "1",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
@@ -285,7 +285,7 @@
     "label" : {
       "IRI-based" : "Thing"
     },
-    "subClasses" : [ "24", "22", "18", "15" ],
+    "subClasses" : [ "24", "22", "18", "2" ],
     "comment" : {
       "undefined" : "Any physical object relevant from a user or application perspective."
     },
@@ -294,7 +294,7 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "37",
+    "id" : "36",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -307,19 +307,19 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "baseIri" : "http://www.w3.org/2000/01/rdf-schema",
-    "id" : "40",
+    "id" : "39",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
     }
   }, {
     "instances" : 0,
-    "union" : [ "16", "6", "2" ],
+    "union" : [ "16", "7", "40" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "8"
+    "id" : "9"
   }, {
     "instances" : 0,
-    "union" : [ "16", "6", "2" ],
+    "union" : [ "16", "7", "40" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "41"
   }, {
@@ -329,9 +329,23 @@
     "id" : "4"
   }, {
     "instances" : 0,
-    "union" : [ "6", "2" ],
+    "union" : [ "7", "40" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "42"
+  }, {
+    "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThing",
+    "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MusicalThing"
+    },
+    "subClasses" : [ "1", "43", "29" ],
+    "comment" : {
+      "undefined" : "A thing used to produce or enjoy music, with reference to its context."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "16" ]
   }, {
     "iri" : "http://www.w3.org/ns/prov#Agent",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -347,29 +361,15 @@
     "label" : {
       "IRI-based" : "Agent"
     },
-    "subClasses" : [ "1" ],
+    "subClasses" : [ "5" ],
     "comment" : {
       "undefined" : "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity."
     },
     "attributes" : [ "external" ],
-    "id" : "2"
-  }, {
-    "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThing",
-    "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "MusicalThing"
-    },
-    "subClasses" : [ "31", "44", "29" ],
-    "comment" : {
-      "undefined" : "A thing used to produce or enjoy music, with reference to its context."
-    },
-    "attributes" : [ "external" ],
-    "id" : "15",
-    "superClasses" : [ "16" ]
+    "id" : "40"
   }, {
     "instances" : 0,
-    "union" : [ "6", "2" ],
+    "union" : [ "7", "40" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "45"
   }, {
@@ -391,13 +391,27 @@
       "undefined" : "Citing the ontology website: A software agent is running software."
     },
     "attributes" : [ "external" ],
-    "id" : "1",
-    "superClasses" : [ "2" ]
+    "id" : "5",
+    "superClasses" : [ "40" ]
   }, {
     "instances" : 0,
     "union" : [ "22", "16" ],
     "attributes" : [ "anonymous", "union" ],
     "id" : "46"
+  }, {
+    "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThingApplication",
+    "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MusicalThingApplication"
+    },
+    "intersection" : [ "10" ],
+    "comment" : {
+      "undefined" : "If an iot:Application instance is also connected  through iot:isInvolvedIn to an instance of a class belonging to the Music Ontology, or to the iomust namespace, then it is also an instance of iomust:MusicalThingApplication."
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "14",
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Connection",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
@@ -409,26 +423,12 @@
       "undefined" : "Any connection that allow communication from a thing to another."
     },
     "attributes" : [ "external" ],
-    "id" : "33"
-  }, {
-    "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThingApplication",
-    "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "MusicalThingApplication"
-    },
-    "intersection" : [ "9" ],
-    "comment" : {
-      "undefined" : "If an iot:Application instance is also connected  through iot:isInvolvedIn to an instance of a class belonging to the Music Ontology, or to the iomust namespace, then it is also an instance of iomust:MusicalThingApplication."
-    },
-    "attributes" : [ "intersection", "external" ],
-    "id" : "13",
-    "superClasses" : [ "9" ]
+    "id" : "32"
   }, {
     "instances" : 0,
     "union" : [ "22", "16" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "34"
+    "id" : "33"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/SmartInstrument",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust",
@@ -449,8 +449,8 @@
       "undefined" : "A smart musical thing that is also an instrument, in the sense given by the Music Ontology"
     },
     "attributes" : [ "intersection", "external" ],
-    "id" : "44",
-    "superClasses" : [ "15" ]
+    "id" : "43",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/ConnectedThing",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
@@ -488,13 +488,13 @@
     "label" : {
       "IRI-based" : "StageEquipment"
     },
-    "intersection" : [ "39" ],
+    "intersection" : [ "38" ],
     "comment" : {
       "undefined" : "A collection of musical things serving as equipment. The definition of collection can be extracted from external ontologies designed ad hoc for this, like the collection ontology by Ciccarese et al."
     },
     "attributes" : [ "intersection", "external" ],
     "id" : "63",
-    "superClasses" : [ "39" ]
+    "superClasses" : [ "38" ]
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/SmartThing",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
@@ -520,7 +520,7 @@
       "undefined" : "Ciccarese, P., & Peroni, S. (2014). The Collections Ontology: creating and handling collections in OWL 2 DL frameworks. Semantic Web, 5(6), 515-529."
     },
     "attributes" : [ "external" ],
-    "id" : "39"
+    "id" : "38"
   }, {
     "iri" : "http://purl.org/ontology/mo/Instrument",
     "baseIri" : "http://purl.org/ontology/mo",
@@ -562,10 +562,10 @@
     "id" : "3",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "7",
+    "id" : "8",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "14",
+    "id" : "15",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "17",
@@ -583,22 +583,22 @@
     "id" : "23",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "5",
+    "id" : "6",
     "type" : "owl:objectProperty"
   }, {
     "id" : "28",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "32",
+    "id" : "31",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "36",
+    "id" : "35",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "38",
+    "id" : "37",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "43",
+    "id" : "44",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "47",
@@ -643,7 +643,7 @@
     "id" : "62",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "35",
+    "id" : "34",
     "type" : "owl:objectProperty"
   }, {
     "id" : "50",
@@ -674,9 +674,9 @@
     "id" : "0"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/runs",
-    "inverse" : "5",
+    "inverse" : "6",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
-    "range" : "1",
+    "range" : "5",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -692,12 +692,12 @@
     "comment" : {
       "undefined" : "Smart things may be able to run software"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "3"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/isInvolvedIn",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
-    "range" : "9",
+    "range" : "10",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -709,30 +709,30 @@
     "label" : {
       "IRI-based" : "isInvolvedIn"
     },
-    "domain" : "8",
+    "domain" : "9",
     "comment" : {
       "undefined" : "Inverse of involves."
     },
-    "attributes" : [ "object", "asymmetric", "irreflexive", "external" ],
-    "id" : "7"
+    "attributes" : [ "irreflexive", "asymmetric", "external", "object" ],
+    "id" : "8"
   }, {
     "range" : "16",
-    "domain" : "15",
+    "domain" : "2",
     "attributes" : [ "anonymous", "object" ],
-    "id" : "14"
+    "id" : "15"
   }, {
     "range" : "16",
     "domain" : "18",
     "attributes" : [ "anonymous", "object" ],
     "id" : "17"
   }, {
-    "range" : "9",
-    "domain" : "13",
+    "range" : "10",
+    "domain" : "14",
     "attributes" : [ "anonymous", "object" ],
     "id" : "19"
   }, {
-    "range" : "9",
-    "domain" : "10",
+    "range" : "10",
+    "domain" : "11",
     "attributes" : [ "anonymous", "object" ],
     "id" : "20"
   }, {
@@ -760,35 +760,35 @@
     "label" : {
       "IRI-based" : "runsOn"
     },
-    "domain" : "1",
+    "domain" : "5",
     "comment" : {
       "undefined" : "Software runs on smart things"
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "5"
+    "attributes" : [ "external", "object" ],
+    "id" : "6"
   }, {
-    "range" : "9",
-    "domain" : "12",
+    "range" : "10",
+    "domain" : "13",
     "attributes" : [ "anonymous", "object" ],
     "id" : "28"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/connects",
-    "inverse" : "35",
+    "inverse" : "34",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
-    "range" : "34",
+    "range" : "33",
     "label" : {
       "IRI-based" : "connects"
     },
-    "domain" : "33",
+    "domain" : "32",
     "comment" : {
       "undefined" : "Inverse of iot:hasConnection"
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "32"
+    "attributes" : [ "external", "object" ],
+    "id" : "31"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/atLocation",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
-    "range" : "37",
+    "range" : "36",
     "label" : {
       "IRI-based" : "atLocation"
     },
@@ -796,12 +796,12 @@
     "comment" : {
       "undefined" : "General location indication for things"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
-    "id" : "36"
+    "attributes" : [ "datatype", "functional", "external" ],
+    "id" : "35"
   }, {
     "iri" : "http://purl.org/co#elementOf",
     "baseIri" : "http://purl.org/co",
-    "range" : "39",
+    "range" : "38",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -817,8 +817,8 @@
     "comment" : {
       "undefined" : "This object property connects elements to their collection."
     },
-    "attributes" : [ "object", "irreflexive", "external" ],
-    "id" : "38"
+    "attributes" : [ "irreflexive", "external", "object" ],
+    "id" : "37"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasModel",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
@@ -830,16 +830,16 @@
     "comment" : {
       "undefined" : "Model name of the actual implementation."
     },
-    "attributes" : [ "functional", "datatype", "external" ],
-    "id" : "43"
+    "attributes" : [ "datatype", "functional", "external" ],
+    "id" : "44"
   }, {
-    "range" : "33",
-    "domain" : "11",
+    "range" : "32",
+    "domain" : "12",
     "attributes" : [ "anonymous", "object" ],
     "id" : "47"
   }, {
     "range" : "16",
-    "domain" : "11",
+    "domain" : "12",
     "attributes" : [ "anonymous", "object" ],
     "id" : "48"
   }, {
@@ -854,33 +854,33 @@
     "comment" : {
       "undefined" : "Belonging relationship, inverse of ownership"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "functional", "external", "object" ],
     "id" : "49"
   }, {
-    "range" : "9",
-    "domain" : "39",
+    "range" : "10",
+    "domain" : "38",
     "attributes" : [ "anonymous", "object" ],
     "id" : "51"
   }, {
-    "range" : "33",
-    "domain" : "39",
+    "range" : "32",
+    "domain" : "38",
     "attributes" : [ "anonymous", "object" ],
     "id" : "52"
   }, {
     "range" : "16",
-    "domain" : "39",
+    "domain" : "38",
     "attributes" : [ "anonymous", "object" ],
     "id" : "53"
   }, {
-    "range" : "33",
-    "domain" : "9",
+    "range" : "32",
+    "domain" : "10",
     "attributes" : [ "anonymous", "object" ],
     "id" : "55"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/isProducedBy",
     "inverse" : "57",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
-    "range" : "9",
+    "range" : "10",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -892,20 +892,20 @@
     "label" : {
       "IRI-based" : "isProducedBy"
     },
-    "domain" : "11",
+    "domain" : "12",
     "comment" : {
       "undefined" : "An application produces some effects on the environment, inverse of iot:produces."
     },
-    "attributes" : [ "object", "inverse functional", "external" ],
+    "attributes" : [ "inverse functional", "external", "object" ],
     "id" : "56"
   }, {
     "range" : "16",
-    "domain" : "9",
+    "domain" : "10",
     "attributes" : [ "anonymous", "object" ],
     "id" : "58"
   }, {
     "range" : "16",
-    "domain" : "33",
+    "domain" : "32",
     "attributes" : [ "anonymous", "object" ],
     "id" : "59"
   }, {
@@ -919,12 +919,12 @@
     "comment" : {
       "undefined" : "Version numbering of the actual implementation"
     },
-    "attributes" : [ "functional", "datatype", "external" ],
+    "attributes" : [ "datatype", "functional", "external" ],
     "id" : "60"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/produces",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
-    "range" : "11",
+    "range" : "12",
     "annotations" : {
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -936,26 +936,26 @@
     "label" : {
       "IRI-based" : "produces"
     },
-    "domain" : "9",
+    "domain" : "10",
     "comment" : {
       "undefined" : "An application produces some effects on the environment."
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "functional", "external", "object" ],
     "id" : "57"
   }, {
-    "range" : "39",
-    "domain" : "11",
+    "range" : "38",
+    "domain" : "12",
     "attributes" : [ "anonymous", "object" ],
     "id" : "61"
   }, {
-    "range" : "9",
-    "domain" : "11",
+    "range" : "10",
+    "domain" : "12",
     "attributes" : [ "anonymous", "object" ],
     "id" : "62"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasConnection",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
-    "range" : "33",
+    "range" : "32",
     "label" : {
       "IRI-based" : "hasConnection"
     },
@@ -963,8 +963,8 @@
     "comment" : {
       "undefined" : "A connected thing points to the connection through this property"
     },
-    "attributes" : [ "object", "asymmetric", "external" ],
-    "id" : "35"
+    "attributes" : [ "asymmetric", "external", "object" ],
+    "id" : "34"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/owns",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
@@ -976,11 +976,11 @@
     "comment" : {
       "undefined" : "Ownership relationship"
     },
-    "attributes" : [ "object", "asymmetric", "irreflexive", "external" ],
+    "attributes" : [ "irreflexive", "asymmetric", "external", "object" ],
     "id" : "50"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/involves",
-    "inverse" : "7",
+    "inverse" : "8",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
     "range" : "41",
     "annotations" : {
@@ -994,16 +994,16 @@
     "label" : {
       "IRI-based" : "involves"
     },
-    "domain" : "9",
+    "domain" : "10",
     "comment" : {
       "undefined" : "An application involves in the process things and agents (in the broader definition)"
     },
-    "attributes" : [ "object", "asymmetric", "irreflexive", "external" ],
+    "attributes" : [ "irreflexive", "asymmetric", "external", "object" ],
     "id" : "64"
   }, {
     "iri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasBrand",
     "baseIri" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
-    "range" : "40",
+    "range" : "39",
     "label" : {
       "IRI-based" : "hasBrand"
     },
@@ -1014,23 +1014,23 @@
     "attributes" : [ "datatype", "external" ],
     "id" : "65"
   }, {
-    "range" : "15",
-    "domain" : "44",
+    "range" : "2",
+    "domain" : "29",
     "attributes" : [ "anonymous", "object" ],
     "id" : "66"
   }, {
-    "range" : "15",
-    "domain" : "31",
+    "range" : "2",
+    "domain" : "43",
     "attributes" : [ "anonymous", "object" ],
     "id" : "67"
   }, {
-    "range" : "39",
+    "range" : "38",
     "domain" : "63",
     "attributes" : [ "anonymous", "object" ],
     "id" : "68"
   }, {
-    "range" : "15",
-    "domain" : "29",
+    "range" : "40",
+    "domain" : "5",
     "attributes" : [ "anonymous", "object" ],
     "id" : "69"
   } ]

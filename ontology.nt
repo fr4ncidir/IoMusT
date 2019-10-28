@@ -4,7 +4,7 @@
 <http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things> <http://purl.org/dc/elements/1.1/creator> "Francesco Antoniazzi" .
 <http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things> <http://purl.org/dc/elements/1.1/rights> <https://www.gnu.org/licenses/gpl.html> .
 <http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things> <http://purl.org/dc/terms/created> "2019-06-10T10:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things> <http://purl.org/dc/terms/title> "Internet of Musical Things Ontology (IMTO)" .
+<http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things> <http://purl.org/dc/terms/title> "Internet of Musical Things Ontology (IoMusT)" .
 <http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://github.com/fr4ncidir/IoMusT"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 # 
 # 
