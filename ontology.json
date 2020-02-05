@@ -13,7 +13,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
     }, {
       "@id" : "http://www.w3.org/ns/prov#Agent"
     }, {
@@ -25,7 +25,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
     }, {
       "@id" : "http://www.w3.org/ns/prov#Agent"
     }, {
@@ -47,9 +47,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/SmartThing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/SmartThing"
     }, {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
     } ]
   } ]
 }, {
@@ -57,9 +57,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/SmartThing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/SmartThing"
     }, {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
     } ]
   } ]
 }, {
@@ -67,7 +67,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
     }, {
       "@id" : "_:genid29"
     } ]
@@ -76,17 +76,17 @@
   "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasConnection"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/hasConnection"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Connection"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Connection"
   } ]
 }, {
   "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/Application"
     }, {
       "@id" : "_:genid33"
     } ]
@@ -95,19 +95,19 @@
   "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/involves"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/involves"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing"
   } ]
 }, {
   "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://purl.org/ontology/mo/Instrument"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/SmartThing"
     }, {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/SmartThing"
+      "@id" : "http://purl.org/ontology/mo/Instrument"
     } ]
   } ]
 }, {
@@ -115,9 +115,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/SmartThing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/SmartThing"
     }, {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing"
     } ]
   } ]
 }, {
@@ -125,9 +125,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/ConnectedThing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/ConnectedThing"
     }, {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
     } ]
   } ]
 }, {
@@ -147,16 +147,16 @@
     "@id" : "http://purl.org/co#elementOf"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing"
   } ]
 }, {
   "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/WearableThing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/WearableThing"
     }, {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing"
     } ]
   } ]
 }, {
@@ -168,11 +168,11 @@
     }, {
       "@id" : "http://purl.org/co#Collection"
     }, {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/Application"
     }, {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Connection"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/Connection"
     }, {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
     } ]
   } ]
 }, {
@@ -180,9 +180,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/ConnectedThing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/ConnectedThing"
     }, {
-      "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+      "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
     } ]
   } ]
 }, {
@@ -232,17 +232,7 @@
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/ontology/mo/Instrument",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Citing the Music ontology web page: Any of various devices or contrivances that can be used to produce musical tones or sound. Any taxonomy can be used to subsume this concept. The default one is one extracted by Ivan Herman from the Musicbrainz instrument taxonomy, conforming to SKOS. This concept holds a seeAlso link towards this taxonomy."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "http://musicontology.com/specification/"
-  } ]
-}, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
     "@value" : "Gyorgy Fazekas"
@@ -265,133 +255,133 @@
     "@value" : "https://github.com/fr4ncidir/IoMusT"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/0.1"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/0.1"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/Application",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "The semantic endpoint tagging together all elements, items and agents involved in an activity."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/ConnectedThing",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/ConnectedThing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Any thing connected to a communication network."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Connection"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Connection"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid27"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Connection",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/Connection",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Any connection that allow communication from a thing to another."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/InteractiveApplication",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/InteractiveApplication",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An IoT application that is interactive (i.e., directly communicates with the user)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Application"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/LearningApplication",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/LearningApplication",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An application devoted to learning of some kind of concept, technology, art..."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Application"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/SmartThing",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/SmartThing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Smart things, e.g., a smartphone, a smart TV, include special technological  features  or artifacts that provide them with relevant added value over the basic version of the same object."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Any physical object relevant from a user or application perspective."
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/WearableThing",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/WearableThing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Any wearable object."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/atLocation",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/atLocation",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "General location indication for things"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/belongsTo",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/belongsTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Belonging relationship, inverse of ownership"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/owns"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/owns"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/connects",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/connects",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Inverse of iot:hasConnection"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Connection"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Connection"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid4"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasConnection"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/hasConnection"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasBrand",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/hasBrand",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Brand name, like FIAT, Ducati, Boeing, Gibson, Stradivari, and so on..."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasConnection",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/hasConnection",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A connected thing points to the connection through this property"
@@ -400,73 +390,73 @@
     "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Connection"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Connection"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasModel",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/hasModel",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Model name of the actual implementation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/hasVersion",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/hasVersion",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Version numbering of the actual implementation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/involves",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/involves",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An application involves in the process things and agents (in the broader definition)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Application"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid10"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/isInvolvedIn"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/isInvolvedIn"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/isInvolvedIn"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/isInvolvedIn"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThing",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A thing used to produce or enjoy music, with reference to its context."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThingApplication",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThingApplication",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "If an iot:Application instance is also connected  through iot:isInvolvedIn to an instance of a class belonging to the Music Ontology, or to the iomust namespace, then it is also an instance of iomust:MusicalThingApplication."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Application"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid31"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/SmartInstrument",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/SmartInstrument",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A smart musical thing that is also an instrument, in the sense given by the Music Ontology"
@@ -475,25 +465,25 @@
     "@id" : "http://purl.org/ontology/mo/Instrument"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid35"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/SmartMusicalThing",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/SmartMusicalThing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A musical thing that is also a smart thing."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid38"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/StageEquipment",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A collection of musical things serving as equipment. The definition of collection can be extracted from external ontologies designed ad hoc for this, like the collection ontology by Ciccarese et al."
@@ -508,19 +498,19 @@
     "@id" : "_:genid41"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/WearableMusicalThing",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/WearableMusicalThing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "A musical thing that is also wearable"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/iomust/MusicalThing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid45"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/isInvolvedIn",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/isInvolvedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Inverse of involves."
@@ -529,13 +519,13 @@
     "@id" : "_:genid14"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Application"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/involves"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/involves"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/isProducedBy",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/isProducedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An application produces some effects on the environment, inverse of iot:produces."
@@ -544,16 +534,16 @@
     "@id" : "http://purl.org/NET/c4dm/event.owl#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Application"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/produces"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/produces"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/produces"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/produces"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/owns",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/owns",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Ownership relationship"
@@ -562,25 +552,25 @@
     "@id" : "_:genid18"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Thing"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Thing"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/produces",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/produces",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "An application produces some effects on the environment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/Application"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/Application"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://purl.org/NET/c4dm/event.owl#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/isProducedBy"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/isProducedBy"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/runs",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/runs",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Smart things may be able to run software"
@@ -592,13 +582,13 @@
     "@id" : "http://www.w3.org/ns/prov#SoftwareAgent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/runsOn"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/runsOn"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/runsOn"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/runsOn"
   } ]
 }, {
-  "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/runsOn",
+  "@id" : "http://purl.org/ontology/iomust/internet_of_things/runsOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Software runs on smart things"
@@ -610,7 +600,17 @@
     "@id" : "_:genid24"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "http://www.semanticweb.org/iot/ontologies/2019/5/internet_of_things/runs"
+    "@id" : "http://purl.org/ontology/iomust/internet_of_things/runs"
+  } ]
+}, {
+  "@id" : "http://purl.org/ontology/mo/Instrument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Citing the Music ontology web page: Any of various devices or contrivances that can be used to produce musical tones or sound. Any taxonomy can be used to subsume this concept. The default one is one extracted by Ivan Herman from the Musicbrainz instrument taxonomy, conforming to SKOS. This concept holds a seeAlso link towards this taxonomy."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
+    "@value" : "http://musicontology.com/specification/"
   } ]
 }, {
   "@id" : "http://www.w3.org/ns/prov#Agent",
