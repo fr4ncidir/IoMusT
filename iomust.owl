@@ -21,8 +21,10 @@
         <owl:versionIRI rdf:resource="http://purl.org/ontology/iomust/internet_of_things/0.1"/>
         <dc:contributor>Gyorgy Fazekas</dc:contributor>
         <dc:creator>Francesco Antoniazzi</dc:creator>
+        <dc:description xml:lang="en">The Internet of Musical Things (IoMusT) is an emerging research area consisting of the extension of the Internet of Things paradigm to the music domain. Interoperability represents a central issue within this domain, where heterogeneous objects dedicated to the production and/or reception of musical content (Musical Things) are envisioned to communicate between each other. This paper proposes an ontology for the representation of the knowledge related to IoMusT ecosystems to facilitate interoperability between Musical Things. There was no previous comprehensive data model for the IoMusT domain, however the new ontology relates to existing ontologies, including the SOSA Ontology for the representation of sensors and actuators and the Music Ontology focusing on the production and consumption of music. This paper documents the design of the ontology and its evaluation with respect to specific requirements gathered from an extensive literature review, which was based on scenarios involving IoMusT stakeholders, such as performers and audience members.</dc:description>
         <dc:rights rdf:resource="https://www.gnu.org/licenses/gpl.html"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-10T10:00:00</terms:created>
+        <terms:language>en</terms:language>
         <terms:title>Internet of Musical Things Ontology (IoMusT)</terms:title>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/fr4ncidir/IoMusT</rdfs:seeAlso>
     </owl:Ontology>
@@ -52,6 +54,12 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/rights -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
@@ -61,6 +69,12 @@
     <!-- http://purl.org/dc/terms/created -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language"/>
     
 
 
