@@ -705,7 +705,7 @@
     "comment" : {
       "undefined" : "An application produces some effects on the environment, inverse of iot:produces."
     },
-    "attributes" : [ "external", "object", "inverse functional" ],
+    "attributes" : [ "object", "external", "inverse functional" ],
     "id" : "11"
   }, {
     "range" : "2",
@@ -766,7 +766,7 @@
     "comment" : {
       "undefined" : "A connected thing points to the connection through this property"
     },
-    "attributes" : [ "external", "object", "asymmetric" ],
+    "attributes" : [ "asymmetric", "object", "external" ],
     "id" : "34"
   }, {
     "iri" : "http://purl.org/co#elementOf",
@@ -787,7 +787,7 @@
     "comment" : {
       "undefined" : "This object property connects elements to their collection."
     },
-    "attributes" : [ "external", "object", "irreflexive" ],
+    "attributes" : [ "irreflexive", "object", "external" ],
     "id" : "37"
   }, {
     "iri" : "http://purl.org/ontology/iomust/internet_of_things/hasVersion",
@@ -822,7 +822,7 @@
     "comment" : {
       "undefined" : "Smart things may be able to run software"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "44"
   }, {
     "iri" : "http://purl.org/ontology/iomust/internet_of_things/belongsTo",
@@ -836,7 +836,7 @@
     "comment" : {
       "undefined" : "Belonging relationship, inverse of ownership"
     },
-    "attributes" : [ "functional", "external", "object" ],
+    "attributes" : [ "object", "functional", "external" ],
     "id" : "46"
   }, {
     "iri" : "http://purl.org/ontology/iomust/internet_of_things/atLocation",
@@ -880,7 +880,7 @@
     "comment" : {
       "undefined" : "Software runs on smart things"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "45"
   }, {
     "range" : "12",
@@ -933,7 +933,7 @@
     "comment" : {
       "undefined" : "Ownership relationship"
     },
-    "attributes" : [ "external", "object", "asymmetric", "irreflexive" ],
+    "attributes" : [ "asymmetric", "irreflexive", "object", "external" ],
     "id" : "47"
   }, {
     "iri" : "http://purl.org/ontology/iomust/internet_of_things/isInvolvedIn",
@@ -954,7 +954,7 @@
     "comment" : {
       "undefined" : "Inverse of involves."
     },
-    "attributes" : [ "external", "object", "asymmetric", "irreflexive" ],
+    "attributes" : [ "asymmetric", "irreflexive", "object", "external" ],
     "id" : "61"
   }, {
     "iri" : "http://purl.org/ontology/iomust/internet_of_things/connects",
@@ -968,7 +968,7 @@
     "comment" : {
       "undefined" : "Inverse of iot:hasConnection"
     },
-    "attributes" : [ "external", "object" ],
+    "attributes" : [ "object", "external" ],
     "id" : "62"
   }, {
     "iri" : "http://purl.org/ontology/iomust/internet_of_things/involves",
@@ -990,7 +990,7 @@
     "comment" : {
       "undefined" : "An application involves in the process things and agents (in the broader definition)"
     },
-    "attributes" : [ "external", "object", "asymmetric", "irreflexive" ],
+    "attributes" : [ "asymmetric", "irreflexive", "object", "external" ],
     "id" : "63"
   }, {
     "iri" : "http://purl.org/ontology/iomust/internet_of_things/produces",
@@ -1011,7 +1011,7 @@
     "comment" : {
       "undefined" : "An application produces some effects on the environment."
     },
-    "attributes" : [ "functional", "external", "object" ],
+    "attributes" : [ "object", "functional", "external" ],
     "id" : "13"
   }, {
     "range" : "12",
