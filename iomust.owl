@@ -107,6 +107,17 @@
     
 
 
+    <!-- http://purl.org/ontology/iomust/internet_of_things#hasConnectionWith -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/iomust/internet_of_things#hasConnectionWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/ontology/iomust/internet_of_things/Thing"/>
+        <rdfs:range rdf:resource="http://purl.org/ontology/iomust/internet_of_things/Thing"/>
+        <rdfs:comment>Connects a Thing with another Thing</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/ontology/iomust/internet_of_things/belongsTo -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/ontology/iomust/internet_of_things/belongsTo">
@@ -364,6 +375,22 @@
 
     <owl:Class rdf:about="http://purl.org/co#Collection">
         <rdfs:comment>Ciccarese, P., &amp; Peroni, S. (2014). The Collections Ontology: creating and handling collections in OWL 2 DL frameworks. Semantic Web, 5(6), 515-529.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/iomust/internet_of_things#StageScreen -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/iomust/internet_of_things#StageScreen">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/iomust/internet_of_things#StageSmokeMachine -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/iomust/internet_of_things#StageSmokeMachine">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment"/>
     </owl:Class>
     
 
