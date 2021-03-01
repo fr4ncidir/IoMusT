@@ -31,15 +31,6 @@
      xmlns:data-view="http://www.w3.org/2003/g/data-view#">
     <owl:Ontology rdf:about="http://purl.org/ontology/iomust/internet_of_things">
         <owl:versionIRI rdf:resource="http://purl.org/ontology/iomust/internet_of_things/0.1"/>
-        <owl:imports rdf:resource="http://dbpedia.org/resource/"/>
-        <owl:imports rdf:resource="http://purl.org/co"/>
-        <owl:imports rdf:resource="http://purl.org/NET/c4dm/event.owl"/>
-        <owl:imports rdf:resource="http://purl.org/NET/c4dm/timeline.owl"/>
-        <owl:imports rdf:resource="http://purl.org/ontology/mo/"/>
-        <owl:imports rdf:resource="http://purl.org/ontology/studio/device"/>
-        <owl:imports rdf:resource="http://www.w3.org/2002/07/owl"/>
-        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
-        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
 		<dc:contributor>Luca Turchet</dc:contributor>
         <dc:contributor>Gyorgy Fazekas</dc:contributor>
         <dc:creator>Francesco Antoniazzi</dc:creator>
