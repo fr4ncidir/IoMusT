@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://purl.org/ontology/iomust/internet_of_things","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/ontology/iomust/internet_of_things","name":"Internet of Musical Things Ontology (IoMusT)", "headline":"The Internet of Musical Things (IoMusT) is an emerging research area consisting of the extension of the Internet of Things paradigm to the music domain. Interoperability represents a central issue within this domain, where heterogeneous objects dedicated to the production and/or reception of musical content (Musical Things) are envisioned to communicate between each other. This paper proposes an ontology for the representation of the knowledge related to IoMusT ecosystems to facilitate interoperability between Musical Things. There was no previous comprehensive data model for the IoMusT domain, however the new ontology relates to existing ontologies, including the SOSA Ontology for the representation of sensors and actuators and the Music Ontology focusing on the production and consumption of music. This paper documents the design of the ontology and its evaluation with respect to specific requirements gathered from an extensive literature review, which was based on scenarios involving IoMusT stakeholders, such as performers and audience members.", "datePublished":"2019-06-10T10:00:00", "version":"https://github.com/fr4ncidir/IoMusT", "license":"https://www.gnu.org/licenses/gpl.html", "author":[{"@type":"Person","name":"Francesco Antoniazzi, ARCES, University of Bologna"}], "contributor":[{"@type":"Person","name":"Gyorgy Fazekas, C4DM, Queen Mary University of London"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://purl.org/ontology/iomust/internet_of_things","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/ontology/iomust/internet_of_things","name":"Internet of Musical Things Ontology (IoMusT)", "headline":"The Internet of Musical Things (IoMusT) is an emerging research area consisting of the extension of the Internet of Things paradigm to the music domain. Interoperability represents a central issue within this domain, where heterogeneous objects dedicated to the production and/or reception of musical content (Musical Things) are envisioned to communicate between each other. This paper proposes an ontology for the representation of the knowledge related to IoMusT ecosystems to facilitate interoperability between Musical Things. There was no previous comprehensive data model for the IoMusT domain, however the new ontology relates to existing ontologies, including the SOSA Ontology for the representation of sensors and actuators and the Music Ontology focusing on the production and consumption of music. This paper documents the design of the ontology and its evaluation with respect to specific requirements gathered from an extensive literature review, which was based on scenarios involving IoMusT stakeholders, such as performers and audience members.", "datePublished":"2019-06-10T10:00:00", "license":"https://www.gnu.org/licenses/gpl.html", "author":[{"@type":"Person","name":"Francesco Antoniazzi"}], "contributor":[{"@type":"Person","name":"Gyorgy Fazekas"},{"@type":"Person","name":"Luca Turchet"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -42,16 +42,12 @@ function loadTOC(){
 	  t+='</ul>';
 	  $("#toc").html(t); 
 }
- $.fn.ignore = function(sel){
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
- };    $(function(){
-      $("#abstract").load("sections/abstract-en.html"); 
-      $("#introduction").load("sections/introduction-en.html"); 
-      $("#overview").load("sections/overview-en.html"); 
-      $("#references").load("sections/references-en.html"); 
-      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
-    });
-    </script> 
+ }; 
+   </script> 
   </head> 
 
 <body>
@@ -59,32 +55,26 @@ function loadTOC(){
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
 <h1>Internet of Musical Things Ontology (IoMusT)</h1>
-<h2>Ontology Release  2019-06-10T10:00:00</h2>
-<h2>Documentation Release 2020-02-05T15:00:00</h2>
+<h2>Release  2019-06-10T10:00:00</h2>
+
 
 <dl>
 <dt>This version:</dt>
 <dd><a href="http://purl.org/ontology/iomust/internet_of_things/0.1">http://purl.org/ontology/iomust/internet_of_things/0.1</a></dd>
 <dt>Latest version:</dt>
 <dd><a href="https://fr4ncidir.github.io/IoMusT/">https://fr4ncidir.github.io/IoMusT/</a></dd>
-<dt>Previous version:</dt>
-<dd><a href="https://github.com/fr4ncidir/IoMusT/tree/28OctoberDocumentation">28th October 2019 documentation</a></dd>
 <dt>Ontology available at:</dt>
 <dd><a href="http://purl.org/ontology/iomust/internet_of_things">http://purl.org/ontology/iomust/internet_of_things</a></dd>
-<dt>Version Control:</dt>
-<dd><a href="https://github.com/fr4ncidir/IoMusT">Github repository</a></dd>
 <dt>Authors:</dt>
-<dd>Francesco Antoniazzi, ARCES, University of Bologna</dd>
+<dd>Francesco Antoniazzi</dd>
 
 <dt>Contributors:</dt>
-<dd>Gyorgy Fazekas, C4DM, Queen Mary University of London</dd>
+<dd>Luca Turchet</dd><dd>Gyorgy Fazekas</dd>
 
-<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://www.gnu.org/licenses/gpl.html" target="_blank"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="https://www.gnu.org/licenses/gpl.html" /></a>
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://www.gnu.org/licenses/gpl.html" target="_blank"><img src="https://img.shields.io/badge/License-https://www.gnu.org/licenses/gpl.html-blue.svg" alt="https://www.gnu.org/licenses/gpl.html" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Luca Turchet, Francesco Antoniazzi, Fabio Viola, Fausto Giunchiglia, György Fazekas, The Internet of Musical Things Ontology, Journal of Web Semantics, 2020, 100548, ISSN 1570-8268, https://doi.org/10.1016/j.websem.2020.100548.</dd>
-<dt>DOI:</dt>
-<dd><a href="http://dx.doi.org/https://doi.org/10.1016/j.websem.2020.100548"><img src ="https://img.shields.io/badge/DOI-https://doi.org/10.1016/j.websem.2020.100548-blue.svg" alt="https://doi.org/10.1016/j.websem.2020.100548" /></a></dd>
+<dd>Luca Turchet, Francesco Antoniazzi, Fabio Viola, Fausto Giunchiglia, György Fazekas, The Internet of Musical Things Ontology, Journal of Web Semantics, 2020, 100548, ISSN 1570-8268, <a href="https://doi.org/10.1016/j.websem.2020.100548">https://doi.org/10.1016/j.websem.2020.100548</a>.</dd>
 </dl>
 
 <hr/>
@@ -93,14 +83,1798 @@ function loadTOC(){
 <div>
 <span>Ontology Specification Draft</span>
 </div>
-</div>     <div id="abstract"></div>
-<div id="toc"></div>     <div id="introduction"></div>
-     <div id="overview"></div>
-     <div id="crossref"></div>
-     <div id="references"></div>
-     <div id="changelog"></div>
-<div id="acknowledgements">
-<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The Internet of Musical Things (IoMusT) is an emerging research area consisting of the extension of the Internet of Things paradigm to the music domain. Interoperability represents a central issue within this domain, where heterogeneous objects dedicated to the production and/or reception of musical content (Musical Things) are envisioned to communicate between each other. This paper proposes an ontology for the representation of the knowledge related to IoMusT ecosystems to facilitate interoperability between Musical Things. There was no previous comprehensive data model for the IoMusT domain, however the new ontology relates to existing ontologies, including the SOSA Ontology for the representation of sensors and actuators and the Music Ontology focusing on the production and consumption of music. This paper documents the design of the ontology and its evaluation with respect to specific requirements gathered from an extensive literature review, which was based on scenarios involving IoMusT stakeholders, such as performers and audience members.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>iomust</b></td><td>&lt;http://purl.org/ontology/iomust/internet_of_things&gt;</td></tr>
+<tr><td><b>iot</b></td><td>&lt;http://purl.org/ontology/iomust/internet_of_things&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;http://schema.org&gt;</td></tr>
+<tr><td><b>ns</b></td><td>&lt;http://www.w3.org/2003/06/sw-vocab-status/ns&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>bio</b></td><td>&lt;http://purl.org/vocab/bio/0.1&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>music</b></td><td>&lt;http://purl.org/ontology/mo&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
+<tr><td><b>event</b></td><td>&lt;http://purl.org/NET/c4dm/event.owl&gt;</td></tr>
+<tr><td><b>wot</b></td><td>&lt;http://xmlns.com/wot/0.1&gt;</td></tr>
+<tr><td><b>prov</b></td><td>&lt;http://www.w3.org/ns/prov&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1&gt;</td></tr>
+<tr><td><b>sosa</b></td><td>&lt;http://www.w3.org/ns/sosa&gt;</td></tr>
+<tr><td><b>cc</b></td><td>&lt;http://web.resource.org/cc&gt;</td></tr>
+<tr><td><b>label</b></td><td>&lt;http://purl.org/net/vocab/2004/03/label&gt;</td></tr>
+<tr><td><b>co</b></td><td>&lt;http://purl.org/co&gt;</td></tr>
+<tr><td><b>core</b></td><td>&lt;http://purl.org/ontology/ao/core&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>timeline</b></td><td>&lt;http://purl.org/NET/c4dm/timeline.owl&gt;</td></tr>
+<tr><td><b>terms1</b></td><td>&lt;http://open.vocab.org/terms&gt;</td></tr>
+<tr><td><b>device</b></td><td>&lt;http://purl.org/ontology/studio/device&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1&gt;</td></tr>
+<tr><td><b>data-view</b></td><td>&lt;http://www.w3.org/2003/g/data-view&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Internet of Musical Things Ontology (IoMusT): Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">
+         <span>agent</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">
+         <span>agent</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Application"
+         title="http://purl.org/ontology/iomust/internet_of_things/Application">
+         <span>application</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/co#Collection" title="http://purl.org/co#Collection">
+         <span>collection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/ConnectedThing"
+         title="http://purl.org/ontology/iomust/internet_of_things/ConnectedThing">
+         <span>connected thing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Connection"
+         title="http://purl.org/ontology/iomust/internet_of_things/Connection">
+         <span>connection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/NET/c4dm/event.owl#Event" title="http://purl.org/NET/c4dm/event.owl#Event">
+         <span>event</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/ontology/mo/Instrument" title="http://purl.org/ontology/mo/Instrument">
+         <span>instrument</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/InteractiveApplication"
+         title="http://purl.org/ontology/iomust/internet_of_things/InteractiveApplication">
+         <span>interactive application</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/LearningApplication"
+         title="http://purl.org/ontology/iomust/internet_of_things/LearningApplication">
+         <span>learning application</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/iomust/MusicalThing"
+         title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing">
+         <span>musical thing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/iomust/MusicalThingApplication"
+         title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThingApplication">
+         <span>musical thing application</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/iomust/SmartInstrument"
+         title="http://purl.org/ontology/iomust/internet_of_things/iomust/SmartInstrument">
+         <span>smart instrument</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/iomust/SmartMusicalThing"
+         title="http://purl.org/ontology/iomust/internet_of_things/iomust/SmartMusicalThing">
+         <span>smart musical thing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/SmartThing"
+         title="http://purl.org/ontology/iomust/internet_of_things/SmartThing">
+         <span>smart thing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">
+         <span>software agent</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/iomust/StageEquipment"
+         title="http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment">
+         <span>stage equipment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#StageScreen"
+         title="http://purl.org/ontology/iomust/internet_of_things#StageScreen">
+         <span>stage screen</span>
+      </a>
+   </li>
+   <li>
+      <a href="#StageSmokeMachine"
+         title="http://purl.org/ontology/iomust/internet_of_things#StageSmokeMachine">
+         <span>stage smoke machine</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/Thing"
+         title="http://purl.org/ontology/iomust/internet_of_things/Thing">
+         <span>thing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/iomust/WearableMusicalThing"
+         title="http://purl.org/ontology/iomust/internet_of_things/iomust/WearableMusicalThing">
+         <span>wearable musical thing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/WearableThing"
+         title="http://purl.org/ontology/iomust/internet_of_things/WearableThing">
+         <span>wearable thing</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/belongsTo"
+         title="http://purl.org/ontology/iomust/internet_of_things/belongsTo">
+         <span>belongs to</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/connects"
+         title="http://purl.org/ontology/iomust/internet_of_things/connects">
+         <span>connects</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/co#elementOf" title="http://purl.org/co#elementOf">
+         <span>element of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasConnection"
+         title="http://purl.org/ontology/iomust/internet_of_things/hasConnection">
+         <span>has connection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasConnectionWith"
+         title="http://purl.org/ontology/iomust/internet_of_things#hasConnectionWith">
+         <span>has connection with</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/involves"
+         title="http://purl.org/ontology/iomust/internet_of_things/involves">
+         <span>involves</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/isInvolvedIn"
+         title="http://purl.org/ontology/iomust/internet_of_things/isInvolvedIn">
+         <span>is involved in</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/isProducedBy"
+         title="http://purl.org/ontology/iomust/internet_of_things/isProducedBy">
+         <span>is produced by</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/owns"
+         title="http://purl.org/ontology/iomust/internet_of_things/owns">
+         <span>owns</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/produces"
+         title="http://purl.org/ontology/iomust/internet_of_things/produces">
+         <span>produces</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/runs"
+         title="http://purl.org/ontology/iomust/internet_of_things/runs">
+         <span>runs</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/runsOn"
+         title="http://purl.org/ontology/iomust/internet_of_things/runsOn">
+         <span>runs on</span>
+      </a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#/atLocation"
+         title="http://purl.org/ontology/iomust/internet_of_things/atLocation">
+         <span>at location</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasBrand"
+         title="http://purl.org/ontology/iomust/internet_of_things/hasBrand">
+         <span>has brand</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasModel"
+         title="http://purl.org/ontology/iomust/internet_of_things/hasModel">
+         <span>has model</span>
+      </a>
+   </li>
+   <li>
+      <a href="#/hasVersion"
+         title="http://purl.org/ontology/iomust/internet_of_things/hasVersion">
+         <span>has version</span>
+      </a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/contributor" title="http://purl.org/dc/elements/1.1/contributor">
+         <span>contributor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/language" title="http://purl.org/dc/terms/language">
+         <span>language</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/rights" title="http://purl.org/dc/elements/1.1/rights">
+         <span>rights</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for Internet of Musical Things Ontology (IoMusT) classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Internet of Musical Things Ontology (IoMusT).
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">
+            <span>agent</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">
+            <span>agent</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Application"
+            title="http://purl.org/ontology/iomust/internet_of_things/Application">
+            <span>application</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/co#Collection" title="http://purl.org/co#Collection">
+            <span>collection</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/ConnectedThing"
+            title="http://purl.org/ontology/iomust/internet_of_things/ConnectedThing">
+            <span>connected thing</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Connection"
+            title="http://purl.org/ontology/iomust/internet_of_things/Connection">
+            <span>connection</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/NET/c4dm/event.owl#Event" title="http://purl.org/NET/c4dm/event.owl#Event">
+            <span>event</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/ontology/mo/Instrument" title="http://purl.org/ontology/mo/Instrument">
+            <span>instrument</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/InteractiveApplication"
+            title="http://purl.org/ontology/iomust/internet_of_things/InteractiveApplication">
+            <span>interactive application</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/LearningApplication"
+            title="http://purl.org/ontology/iomust/internet_of_things/LearningApplication">
+            <span>learning application</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/iomust/MusicalThing"
+            title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing">
+            <span>musical thing</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/iomust/MusicalThingApplication"
+            title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThingApplication">
+            <span>musical thing application</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/iomust/SmartInstrument"
+            title="http://purl.org/ontology/iomust/internet_of_things/iomust/SmartInstrument">
+            <span>smart instrument</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/iomust/SmartMusicalThing"
+            title="http://purl.org/ontology/iomust/internet_of_things/iomust/SmartMusicalThing">
+            <span>smart musical thing</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/SmartThing"
+            title="http://purl.org/ontology/iomust/internet_of_things/SmartThing">
+            <span>smart thing</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">
+            <span>software agent</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/iomust/StageEquipment"
+            title="http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment">
+            <span>stage equipment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#StageScreen"
+            title="http://purl.org/ontology/iomust/internet_of_things#StageScreen">
+            <span>stage screen</span>
+         </a>
+      </li>
+      <li>
+         <a href="#StageSmokeMachine"
+            title="http://purl.org/ontology/iomust/internet_of_things#StageSmokeMachine">
+            <span>stage smoke machine</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/Thing"
+            title="http://purl.org/ontology/iomust/internet_of_things/Thing">
+            <span>thing</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/iomust/WearableMusicalThing"
+            title="http://purl.org/ontology/iomust/internet_of_things/iomust/WearableMusicalThing">
+            <span>wearable musical thing</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/WearableThing"
+            title="http://purl.org/ontology/iomust/internet_of_things/WearableThing">
+            <span>wearable thing</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3.org/ns/prov#Agent">
+      <h3>agent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/prov#Agent</p>
+      <div class="comment">
+         <span class="markdown">An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">software agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://xmlns.com/foaf/0.1/Agent">
+      <h3>agent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/Agent</p>
+      <div class="comment">
+         <span class="markdown">The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group. The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots.</span>
+      </div>
+   </div>
+   <div class="entity" id="/Application">
+      <h3>application<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/Application</p>
+      <div class="comment">
+         <span class="markdown">The semantic endpoint tagging together all elements, items and agents involved in an activity.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/InteractiveApplication"
+               title="http://purl.org/ontology/iomust/internet_of_things/InteractiveApplication">interactive application</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/LearningApplication"
+               title="http://purl.org/ontology/iomust/internet_of_things/LearningApplication">learning application</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/iomust/MusicalThingApplication"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThingApplication">musical thing application</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/involves"
+               title="http://purl.org/ontology/iomust/internet_of_things/involves">involves</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/produces"
+               title="http://purl.org/ontology/iomust/internet_of_things/produces">produces</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/isInvolvedIn"
+               title="http://purl.org/ontology/iomust/internet_of_things/isInvolvedIn">is involved in</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/isProducedBy"
+               title="http://purl.org/ontology/iomust/internet_of_things/isProducedBy">is produced by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://purl.org/NET/c4dm/event.owl#Event" title="http://purl.org/NET/c4dm/event.owl#Event">event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/co#Collection" title="http://purl.org/co#Collection">collection</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Connection"
+               title="http://purl.org/ontology/iomust/internet_of_things/Connection">connection</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Thing"
+               title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/co#Collection">
+      <h3>collection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/co#Collection</p>
+      <div class="comment">
+         <span class="markdown">Ciccarese, P., &amp; Peroni, S. (2014). The Collections Ontology: creating and handling collections in OWL 2 DL frameworks. Semantic Web, 5(6), 515-529.</span>
+      </div>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/iomust/StageEquipment"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment">stage equipment</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.org/co#elementOf" title="http://purl.org/co#elementOf">element of</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://purl.org/NET/c4dm/event.owl#Event" title="http://purl.org/NET/c4dm/event.owl#Event">event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Application"
+               title="http://purl.org/ontology/iomust/internet_of_things/Application">application</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Connection"
+               title="http://purl.org/ontology/iomust/internet_of_things/Connection">connection</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Thing"
+               title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/ConnectedThing">
+      <h3>connected thing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/ConnectedThing</p>
+      <div class="comment">
+         <span class="markdown">Any thing connected to a communication network.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Thing"
+               title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Connection">
+      <h3>connection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/Connection</p>
+      <div class="comment">
+         <span class="markdown">Any connection that allow communication from a thing to another.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/connects"
+               title="http://purl.org/ontology/iomust/internet_of_things/connects">connects</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/hasConnection"
+               title="http://purl.org/ontology/iomust/internet_of_things/hasConnection">has connection</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://purl.org/NET/c4dm/event.owl#Event" title="http://purl.org/NET/c4dm/event.owl#Event">event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/co#Collection" title="http://purl.org/co#Collection">collection</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Application"
+               title="http://purl.org/ontology/iomust/internet_of_things/Application">application</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Thing"
+               title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/NET/c4dm/event.owl#Event">
+      <h3>event<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/NET/c4dm/event.owl#Event</p>
+      <div class="comment">
+         <span class="markdown">Citing from the ontology website, An arbitrary classification of a space/time region, by a cognitive agent. An event may have actively participating agents, passive factors, products, and a location in space/time.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/isProducedBy"
+               title="http://purl.org/ontology/iomust/internet_of_things/isProducedBy">is produced by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/produces"
+               title="http://purl.org/ontology/iomust/internet_of_things/produces">produces</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://purl.org/co#Collection" title="http://purl.org/co#Collection">collection</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Application"
+               title="http://purl.org/ontology/iomust/internet_of_things/Application">application</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Connection"
+               title="http://purl.org/ontology/iomust/internet_of_things/Connection">connection</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Thing"
+               title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/ontology/mo/Instrument">
+      <h3>instrument<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/mo/Instrument</p>
+      <div class="comment">
+         <span class="markdown">Citing the Music ontology web page: Any of various devices or contrivances that can be used to produce musical tones or sound. Any taxonomy can be used to subsume this concept. The default one is one extracted by Ivan Herman from the Musicbrainz instrument taxonomy, conforming to SKOS. This concept holds a seeAlso link towards this taxonomy.</span>
+      </div>
+   </div>
+   <div class="entity" id="/InteractiveApplication">
+      <h3>interactive application<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/InteractiveApplication</p>
+      <div class="comment">
+         <span class="markdown">An IoT application that is interactive (i.e., directly communicates with the user)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Application"
+               title="http://purl.org/ontology/iomust/internet_of_things/Application">application</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/LearningApplication">
+      <h3>learning application<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/LearningApplication</p>
+      <div class="comment">
+         <span class="markdown">An application devoted to learning of some kind of concept, technology, art...</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Application"
+               title="http://purl.org/ontology/iomust/internet_of_things/Application">application</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/iomust/MusicalThing">
+      <h3>musical thing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing</p>
+      <div class="comment">
+         <span class="markdown">A thing used to produce or enjoy music, with reference to its context.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Thing"
+               title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/iomust/SmartInstrument"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/SmartInstrument">smart instrument</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/iomust/SmartMusicalThing"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/SmartMusicalThing">smart musical thing</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/iomust/WearableMusicalThing"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/WearableMusicalThing">wearable musical thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/iomust/MusicalThingApplication">
+      <h3>musical thing application<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThingApplication</p>
+      <div class="comment">
+         <span class="markdown">If an iot:Application instance is also connected  through iot:isInvolvedIn to an instance of a class belonging to the Music Ontology, or to the iomust namespace, then it is also an instance of iomust:MusicalThingApplication.</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#/Application"
+               title="http://purl.org/ontology/iomust/internet_of_things/Application">application</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="#/involves"
+               title="http://purl.org/ontology/iomust/internet_of_things/involves">involves</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#/iomust/MusicalThing"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing">musical thing</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Application"
+               title="http://purl.org/ontology/iomust/internet_of_things/Application">application</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/iomust/SmartInstrument">
+      <h3>smart instrument<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/iomust/SmartInstrument</p>
+      <div class="comment">
+         <span class="markdown">A smart musical thing that is also an instrument, in the sense given by the Music Ontology</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#/SmartThing"
+               title="http://purl.org/ontology/iomust/internet_of_things/SmartThing">smart thing</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> 
+            <a href="#http://purl.org/ontology/mo/Instrument" title="http://purl.org/ontology/mo/Instrument">instrument</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/iomust/MusicalThing"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing">musical thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/iomust/SmartMusicalThing">
+      <h3>smart musical thing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/iomust/SmartMusicalThing</p>
+      <div class="comment">
+         <span class="markdown">A musical thing that is also a smart thing.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/iomust/MusicalThing"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing">musical thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/SmartThing">
+      <h3>smart thing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/SmartThing</p>
+      <div class="comment">
+         <span class="markdown">Smart things, e.g., a smartphone, a smart TV, include special technological  features  or artifacts that provide them with relevant added value over the basic version of the same object.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Thing"
+               title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/ns/prov#SoftwareAgent">
+      <h3>software agent<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/ns/prov#SoftwareAgent</p>
+      <div class="comment">
+         <span class="markdown">Citing the ontology website: A software agent is running software.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">agent</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/runsOn"
+               title="http://purl.org/ontology/iomust/internet_of_things/runsOn">runs on</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#/runs"
+               title="http://purl.org/ontology/iomust/internet_of_things/runs">runs</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/iomust/StageEquipment">
+      <h3>stage equipment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment</p>
+      <div class="comment">
+         <span class="markdown">A collection of musical things serving as equipment. The definition of collection can be extracted from external ontologies designed ad hoc for this, like the collection ontology by Ciccarese et al.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/co#Collection" title="http://purl.org/co#Collection">collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#StageScreen"
+               title="http://purl.org/ontology/iomust/internet_of_things#StageScreen">stage screen</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StageSmokeMachine"
+               title="http://purl.org/ontology/iomust/internet_of_things#StageSmokeMachine">stage smoke machine</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StageScreen">
+      <h3>stage screen<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things#StageScreen</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/iomust/StageEquipment"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment">stage equipment</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StageSmokeMachine">
+      <h3>stage smoke machine<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things#StageSmokeMachine</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/iomust/StageEquipment"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment">stage equipment</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/Thing">
+      <h3>thing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/Thing</p>
+      <div class="comment">
+         <span class="markdown">Any physical object relevant from a user or application perspective.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://purl.org/ontology/studio/device/Device"
+               target="_blank"
+               title="http://purl.org/ontology/studio/device/Device">device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#/ConnectedThing"
+               title="http://purl.org/ontology/iomust/internet_of_things/ConnectedThing">connected thing</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/iomust/MusicalThing"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing">musical thing</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/SmartThing"
+               title="http://purl.org/ontology/iomust/internet_of_things/SmartThing">smart thing</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/WearableThing"
+               title="http://purl.org/ontology/iomust/internet_of_things/WearableThing">wearable thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#/atLocation"
+               title="http://purl.org/ontology/iomust/internet_of_things/atLocation">at location</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#/belongsTo"
+               title="http://purl.org/ontology/iomust/internet_of_things/belongsTo">belongs to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasBrand"
+               title="http://purl.org/ontology/iomust/internet_of_things/hasBrand">has brand</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasConnectionWith"
+               title="http://purl.org/ontology/iomust/internet_of_things#hasConnectionWith">has connection with</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasModel"
+               title="http://purl.org/ontology/iomust/internet_of_things/hasModel">has model</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasVersion"
+               title="http://purl.org/ontology/iomust/internet_of_things/hasVersion">has version</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasConnectionWith"
+               title="http://purl.org/ontology/iomust/internet_of_things#hasConnectionWith">has connection with</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/owns"
+               title="http://purl.org/ontology/iomust/internet_of_things/owns">owns</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#http://purl.org/NET/c4dm/event.owl#Event" title="http://purl.org/NET/c4dm/event.owl#Event">event</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/co#Collection" title="http://purl.org/co#Collection">collection</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Application"
+               title="http://purl.org/ontology/iomust/internet_of_things/Application">application</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/Connection"
+               title="http://purl.org/ontology/iomust/internet_of_things/Connection">connection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/iomust/WearableMusicalThing">
+      <h3>wearable musical thing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/iomust/WearableMusicalThing</p>
+      <div class="comment">
+         <span class="markdown">A musical thing that is also wearable</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/iomust/MusicalThing"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing">musical thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="/WearableThing">
+      <h3>wearable thing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/WearableThing</p>
+      <div class="comment">
+         <span class="markdown">Any wearable object.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/Thing"
+               title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/belongsTo"
+            title="http://purl.org/ontology/iomust/internet_of_things/belongsTo">
+            <span>belongs to</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/connects"
+            title="http://purl.org/ontology/iomust/internet_of_things/connects">
+            <span>connects</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/co#elementOf" title="http://purl.org/co#elementOf">
+            <span>element of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasConnection"
+            title="http://purl.org/ontology/iomust/internet_of_things/hasConnection">
+            <span>has connection</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasConnectionWith"
+            title="http://purl.org/ontology/iomust/internet_of_things#hasConnectionWith">
+            <span>has connection with</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/involves"
+            title="http://purl.org/ontology/iomust/internet_of_things/involves">
+            <span>involves</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/isInvolvedIn"
+            title="http://purl.org/ontology/iomust/internet_of_things/isInvolvedIn">
+            <span>is involved in</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/isProducedBy"
+            title="http://purl.org/ontology/iomust/internet_of_things/isProducedBy">
+            <span>is produced by</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/owns"
+            title="http://purl.org/ontology/iomust/internet_of_things/owns">
+            <span>owns</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/produces"
+            title="http://purl.org/ontology/iomust/internet_of_things/produces">
+            <span>produces</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/runs"
+            title="http://purl.org/ontology/iomust/internet_of_things/runs">
+            <span>runs</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/runsOn"
+            title="http://purl.org/ontology/iomust/internet_of_things/runsOn">
+            <span>runs on</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="/belongsTo">
+      <h3>belongs to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/belongsTo</p>
+      <div class="comment">
+         <span class="markdown">Belonging relationship, inverse of ownership</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">agent</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#/owns"
+                  title="http://purl.org/ontology/iomust/internet_of_things/owns">owns</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/connects">
+      <h3>connects<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/connects</p>
+      <div class="comment">
+         <span class="markdown">Inverse of iot:hasConnection</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Connection"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Connection">connection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/ConnectedThing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/ConnectedThing">connected thing</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#/hasConnection"
+                  title="http://purl.org/ontology/iomust/internet_of_things/hasConnection">has connection</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/co#elementOf">
+      <h3>element of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/co#elementOf</p>
+      <div class="comment">
+         <span class="markdown">This object property connects elements to their collection.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> irreflexive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/co#Collection" title="http://purl.org/co#Collection">collection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasConnection">
+      <h3>has connection<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/hasConnection</p>
+      <div class="comment">
+         <span class="markdown">A connected thing points to the connection through this property</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/ConnectedThing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/ConnectedThing">connected thing</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Connection"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Connection">connection</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#/connects"
+                  title="http://purl.org/ontology/iomust/internet_of_things/connects">connects</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasConnectionWith">
+      <h3>has connection with<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things#hasConnectionWith</p>
+      <div class="comment">
+         <span class="markdown">Connects a Thing with another Thing</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/involves">
+      <h3>involves<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/involves</p>
+      <div class="comment">
+         <span class="markdown">An application involves in the process things and agents (in the broader definition)</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, irreflexive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Application"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Application">application</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">agent</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#/isInvolvedIn"
+                  title="http://purl.org/ontology/iomust/internet_of_things/isInvolvedIn">is involved in</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/isInvolvedIn">
+      <h3>is involved in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/isInvolvedIn</p>
+      <div class="comment">
+         <span class="markdown">Inverse of involves.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, irreflexive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">agent</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Application"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Application">application</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#/involves"
+                  title="http://purl.org/ontology/iomust/internet_of_things/involves">involves</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/isProducedBy">
+      <h3>is produced by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/isProducedBy</p>
+      <div class="comment">
+         <span class="markdown">An application produces some effects on the environment, inverse of iot:produces.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> inverse functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://purl.org/NET/c4dm/event.owl#Event" title="http://purl.org/NET/c4dm/event.owl#Event">event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Application"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Application">application</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#/produces"
+                  title="http://purl.org/ontology/iomust/internet_of_things/produces">produces</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/owns">
+      <h3>owns<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/owns</p>
+      <div class="comment">
+         <span class="markdown">Ownership relationship</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> asymmetric, irreflexive</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/prov#Agent" title="http://www.w3.org/ns/prov#Agent">agent</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#http://xmlns.com/foaf/0.1/Agent" title="http://xmlns.com/foaf/0.1/Agent">agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#/belongsTo"
+                  title="http://purl.org/ontology/iomust/internet_of_things/belongsTo">belongs to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/produces">
+      <h3>produces<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/produces</p>
+      <div class="comment">
+         <span class="markdown">An application produces some effects on the environment.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Application"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Application">application</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/NET/c4dm/event.owl#Event" title="http://purl.org/NET/c4dm/event.owl#Event">event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#/isProducedBy"
+                  title="http://purl.org/ontology/iomust/internet_of_things/isProducedBy">is produced by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/runs">
+      <h3>runs<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/runs</p>
+      <div class="comment">
+         <span class="markdown">Smart things may be able to run software</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">software agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#/runsOn"
+                  title="http://purl.org/ontology/iomust/internet_of_things/runsOn">runs on</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/runsOn">
+      <h3>runs on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/runsOn</p>
+      <div class="comment">
+         <span class="markdown">Software runs on smart things</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">software agent</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/SmartThing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/SmartThing">smart thing</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#/runs"
+                  title="http://purl.org/ontology/iomust/internet_of_things/runs">runs</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#/atLocation"
+            title="http://purl.org/ontology/iomust/internet_of_things/atLocation">
+            <span>at location</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasBrand"
+            title="http://purl.org/ontology/iomust/internet_of_things/hasBrand">
+            <span>has brand</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasModel"
+            title="http://purl.org/ontology/iomust/internet_of_things/hasModel">
+            <span>has model</span>
+         </a>
+      </li>
+      <li>
+         <a href="#/hasVersion"
+            title="http://purl.org/ontology/iomust/internet_of_things/hasVersion">
+            <span>has version</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="/atLocation">
+      <h3>at location<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/atLocation</p>
+      <div class="comment">
+         <span class="markdown">General location indication for things</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasBrand">
+      <h3>has brand<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/hasBrand</p>
+      <div class="comment">
+         <span class="markdown">Brand name, like FIAT, Ducati, Boeing, Gibson, Stradivari, and so on...</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasModel">
+      <h3>has model<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/hasModel</p>
+      <div class="comment">
+         <span class="markdown">Model name of the actual implementation.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/hasVersion">
+      <h3>has version<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things/hasVersion</p>
+      <div class="comment">
+         <span class="markdown">Version numbering of the actual implementation</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="annotationproperties">
+   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/contributor" title="http://purl.org/dc/elements/1.1/contributor">
+            <span>contributor</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+            <span>created</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
+            <span>creator</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">
+            <span>description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/language" title="http://purl.org/dc/terms/language">
+            <span>language</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/rights" title="http://purl.org/dc/elements/1.1/rights">
+            <span>rights</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+            <span>title</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/contributor">
+      <h3>contributor<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/contributor</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/created">
+      <h3>created<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
+      <h3>creator<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/description">
+      <h3>description<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/description</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/language">
+      <h3>language<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/language</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/rights">
+      <h3>rights<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/rights</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/title">
+      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+L. Turchet, C. Fischione, G. Essl, D. Keller, and M. Barthet. Internet of Musical Things: Vision and Challenges. IEEE Access, 6, 61994–62017, 2018. PDF freely available at: https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8476543</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
 The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
 </div>

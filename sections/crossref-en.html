@@ -1,6 +1,6 @@
 <h2 id="crossreference" class="list">Cross reference for Internet of Musical Things Ontology (IoMusT) classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by Internet of Musical Things Ontology (IoMusT).
-<div id="classes">
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
@@ -97,6 +97,18 @@ This section provides details for each class and property defined by Internet of
          <a href="#/iomust/StageEquipment"
             title="http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment">
             <span>stage equipment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#StageScreen"
+            title="http://purl.org/ontology/iomust/internet_of_things#StageScreen">
+            <span>stage screen</span>
+         </a>
+      </li>
+      <li>
+         <a href="#StageSmokeMachine"
+            title="http://purl.org/ontology/iomust/internet_of_things#StageSmokeMachine">
+            <span>stage smoke machine</span>
          </a>
       </li>
       <li>
@@ -242,18 +254,6 @@ This section provides details for each class and property defined by Internet of
          <span class="markdown">Any thing connected to a communication network.</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#/Thing"
-               title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">and</span> (<a href="#/hasConnection"
-               title="http://purl.org/ontology/iomust/internet_of_things/hasConnection">has connection</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#/Connection"
-               title="http://purl.org/ontology/iomust/internet_of_things/Connection">connection</a>
-            <sup class="type-c" title="class">c</sup>)</dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#/Thing"
@@ -481,16 +481,6 @@ This section provides details for each class and property defined by Internet of
          <span class="markdown">A musical thing that is also a smart thing.</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#/SmartThing"
-               title="http://purl.org/ontology/iomust/internet_of_things/SmartThing">smart thing</a>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">and</span> 
-            <a href="#/iomust/MusicalThing"
-               title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing">musical thing</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#/iomust/MusicalThing"
@@ -559,19 +549,49 @@ This section provides details for each class and property defined by Internet of
          <span class="markdown">A collection of musical things serving as equipment. The definition of collection can be extracted from external ontologies designed ad hoc for this, like the collection ontology by Ciccarese et al.</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#http://purl.org/co#Collection" title="http://purl.org/co#Collection">collection</a>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">and</span> (<a href="#http://purl.org/co#elementOf" title="http://purl.org/co#elementOf">element of</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="logic">some</span> 
-            <a href="#/iomust/MusicalThing"
-               title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing">musical thing</a>
-            <sup class="type-c" title="class">c</sup>)</dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#http://purl.org/co#Collection" title="http://purl.org/co#Collection">collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#StageScreen"
+               title="http://purl.org/ontology/iomust/internet_of_things#StageScreen">stage screen</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#StageSmokeMachine"
+               title="http://purl.org/ontology/iomust/internet_of_things#StageSmokeMachine">stage smoke machine</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StageScreen">
+      <h3>stage screen<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things#StageScreen</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/iomust/StageEquipment"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment">stage equipment</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StageSmokeMachine">
+      <h3>stage smoke machine<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things#StageSmokeMachine</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#/iomust/StageEquipment"
+               title="http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment">stage equipment</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -587,6 +607,13 @@ This section provides details for each class and property defined by Internet of
          <span class="markdown">Any physical object relevant from a user or application perspective.</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://purl.org/ontology/studio/device/Device"
+               target="_blank"
+               title="http://purl.org/ontology/studio/device/Device">device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#/ConnectedThing"
@@ -607,7 +634,9 @@ This section provides details for each class and property defined by Internet of
                title="http://purl.org/ontology/iomust/internet_of_things/belongsTo">belongs to</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#/hasBrand"
                title="http://purl.org/ontology/iomust/internet_of_things/hasBrand">has brand</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasModel"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasConnectionWith"
+               title="http://purl.org/ontology/iomust/internet_of_things#hasConnectionWith">has connection with</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/hasModel"
                title="http://purl.org/ontology/iomust/internet_of_things/hasModel">has model</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#/hasVersion"
                title="http://purl.org/ontology/iomust/internet_of_things/hasVersion">has version</a>
@@ -615,7 +644,9 @@ This section provides details for each class and property defined by Internet of
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#/owns"
+            <a href="#hasConnectionWith"
+               title="http://purl.org/ontology/iomust/internet_of_things#hasConnectionWith">has connection with</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/owns"
                title="http://purl.org/ontology/iomust/internet_of_things/owns">owns</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -642,16 +673,6 @@ This section provides details for each class and property defined by Internet of
          <span class="markdown">A musical thing that is also wearable</span>
       </div>
       <dl class="description">
-         <dt>is equivalent to</dt>
-         <dd>
-            <a href="#/WearableThing"
-               title="http://purl.org/ontology/iomust/internet_of_things/WearableThing">wearable thing</a>
-            <sup class="type-c" title="class">c</sup> 
-            <span class="logic">and</span> 
-            <a href="#/iomust/MusicalThing"
-               title="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing">musical thing</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>has super-classes</dt>
          <dd>
             <a href="#/iomust/MusicalThing"
@@ -679,7 +700,7 @@ This section provides details for each class and property defined by Internet of
          </dd>
       </dl>
    </div>
-</div><div id="objectproperties">
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
@@ -703,6 +724,12 @@ This section provides details for each class and property defined by Internet of
          <a href="#/hasConnection"
             title="http://purl.org/ontology/iomust/internet_of_things/hasConnection">
             <span>has connection</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasConnectionWith"
+            title="http://purl.org/ontology/iomust/internet_of_things#hasConnectionWith">
+            <span>has connection with</span>
          </a>
       </li>
       <li>
@@ -760,7 +787,8 @@ This section provides details for each class and property defined by Internet of
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> functional</p>
+            <strong>has characteristics:
+                </strong> functional</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -834,11 +862,14 @@ This section provides details for each class and property defined by Internet of
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> irreflexive</p>
+            <strong>has characteristics:
+                </strong> irreflexive</p>
          <dl>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#Thing">thing</span>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -861,7 +892,8 @@ This section provides details for each class and property defined by Internet of
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> asymmetric</p>
+            <strong>has characteristics:
+                </strong> asymmetric</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -888,6 +920,39 @@ This section provides details for each class and property defined by Internet of
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasConnectionWith">
+      <h3>has connection with<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/ontology/iomust/internet_of_things#hasConnectionWith</p>
+      <div class="comment">
+         <span class="markdown">Connects a Thing with another Thing</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#topObjectProperty"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</a>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#/Thing"
+                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="/involves">
       <h3>involves<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -900,7 +965,8 @@ This section provides details for each class and property defined by Internet of
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> asymmetric, irreflexive</p>
+            <strong>has characteristics:
+                </strong> asymmetric, irreflexive</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -941,7 +1007,8 @@ This section provides details for each class and property defined by Internet of
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> asymmetric, irreflexive</p>
+            <strong>has characteristics:
+                </strong> asymmetric, irreflexive</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -982,7 +1049,8 @@ This section provides details for each class and property defined by Internet of
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> inverse functional</p>
+            <strong>has characteristics:
+                </strong> inverse functional</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -1016,7 +1084,8 @@ This section provides details for each class and property defined by Internet of
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> asymmetric, irreflexive</p>
+            <strong>has characteristics:
+                </strong> asymmetric, irreflexive</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -1053,7 +1122,8 @@ This section provides details for each class and property defined by Internet of
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> functional</p>
+            <strong>has characteristics:
+                </strong> functional</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -1087,16 +1157,6 @@ This section provides details for each class and property defined by Internet of
       </div>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#/SmartThing"
-                  title="http://purl.org/ontology/iomust/internet_of_things/SmartThing">smart thing</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#/Thing"
-                  title="http://purl.org/ontology/iomust/internet_of_things/Thing">thing</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#http://www.w3.org/ns/prov#SoftwareAgent" title="http://www.w3.org/ns/prov#SoftwareAgent">software agent</a>
@@ -1147,7 +1207,7 @@ This section provides details for each class and property defined by Internet of
          </dl>
       </div>
    </div>
-</div><div id="dataproperties">
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
@@ -1187,7 +1247,8 @@ This section provides details for each class and property defined by Internet of
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> functional</p>
+            <strong>has characteristics:
+                </strong> functional</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -1197,7 +1258,9 @@ This section provides details for each class and property defined by Internet of
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
             </dd>
          </dl>
       </div>
@@ -1222,7 +1285,9 @@ This section provides details for each class and property defined by Internet of
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
             </dd>
          </dl>
       </div>
@@ -1239,7 +1304,8 @@ This section provides details for each class and property defined by Internet of
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> functional</p>
+            <strong>has characteristics:
+                </strong> functional</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -1249,7 +1315,9 @@ This section provides details for each class and property defined by Internet of
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
             </dd>
          </dl>
       </div>
@@ -1266,7 +1334,8 @@ This section provides details for each class and property defined by Internet of
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> functional</p>
+            <strong>has characteristics:
+                </strong> functional</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -1276,10 +1345,108 @@ This section provides details for each class and property defined by Internet of
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
             </dd>
          </dl>
       </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="annotationproperties">
+   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/contributor" title="http://purl.org/dc/elements/1.1/contributor">
+            <span>contributor</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+            <span>created</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
+            <span>creator</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">
+            <span>description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/language" title="http://purl.org/dc/terms/language">
+            <span>language</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/elements/1.1/rights" title="http://purl.org/dc/elements/1.1/rights">
+            <span>rights</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+            <span>title</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/contributor">
+      <h3>contributor<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/contributor</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/created">
+      <h3>created<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
+      <h3>creator<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/description">
+      <h3>description<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/description</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/language">
+      <h3>language<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/language</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/elements/1.1/rights">
+      <h3>rights<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/1.1/rights</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/title">
+      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
