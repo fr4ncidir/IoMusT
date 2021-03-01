@@ -1,24 +1,45 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.org/ontology/iomust/internet_of_things#"
      xml:base="http://purl.org/ontology/iomust/internet_of_things"
+     xmlns:cc="http://web.resource.org/cc/"
      xmlns:co="http://purl.org/co#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:bio="http://purl.org/vocab/bio/0.1/"
      xmlns:iot="http://purl.org/ontology/iomust/internet_of_things/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="http://purl.org/ontology/ao/core#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+     xmlns:label="http://purl.org/net/vocab/2004/03/label#"
      xmlns:music="http://purl.org/ontology/mo/"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:device="http://purl.org/ontology/studio/device/"
      xmlns:iomust="http://purl.org/ontology/iomust/internet_of_things/iomust/"
-     xmlns:timeline="http://purl.org/NET/c4dm/timeline.owl#">
+     xmlns:schema="http://schema.org/"
+     xmlns:terms1="http://open.vocab.org/terms/"
+     xmlns:timeline="http://purl.org/NET/c4dm/timeline.owl#"
+     xmlns:data-view="http://www.w3.org/2003/g/data-view#">
     <owl:Ontology rdf:about="http://purl.org/ontology/iomust/internet_of_things">
         <owl:versionIRI rdf:resource="http://purl.org/ontology/iomust/internet_of_things/0.1"/>
+        <owl:imports rdf:resource="http://dbpedia.org/resource/"/>
+        <owl:imports rdf:resource="http://purl.org/co"/>
+        <owl:imports rdf:resource="http://purl.org/NET/c4dm/event.owl"/>
+        <owl:imports rdf:resource="http://purl.org/NET/c4dm/timeline.owl"/>
+        <owl:imports rdf:resource="http://purl.org/ontology/mo/"/>
+        <owl:imports rdf:resource="http://purl.org/ontology/studio/device"/>
+        <owl:imports rdf:resource="http://www.w3.org/2002/07/owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
         <dc:contributor>Gyorgy Fazekas</dc:contributor>
         <dc:creator>Francesco Antoniazzi</dc:creator>
         <dc:description xml:lang="en">The Internet of Musical Things (IoMusT) is an emerging research area consisting of the extension of the Internet of Things paradigm to the music domain. Interoperability represents a central issue within this domain, where heterogeneous objects dedicated to the production and/or reception of musical content (Musical Things) are envisioned to communicate between each other. This paper proposes an ontology for the representation of the knowledge related to IoMusT ecosystems to facilitate interoperability between Musical Things. There was no previous comprehensive data model for the IoMusT domain, however the new ontology relates to existing ontologies, including the SOSA Ontology for the representation of sensors and actuators and the Music Ontology focusing on the production and consumption of music. This paper documents the design of the ontology and its evaluation with respect to specific requirements gathered from an extensive literature review, which was based on scenarios involving IoMusT stakeholders, such as performers and audience members.</dc:description>
@@ -264,14 +285,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/ontology/iomust/internet_of_things/runs">
         <owl:inverseOf rdf:resource="http://purl.org/ontology/iomust/internet_of_things/runsOn"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/iomust/internet_of_things/SmartThing"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/iomust/internet_of_things/Thing"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
         <rdfs:comment>Smart things may be able to run software</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.org/ontology/iomust/internet_of_things/runsOn"/>
@@ -406,17 +419,6 @@
     <!-- http://purl.org/ontology/iomust/internet_of_things/ConnectedThing -->
 
     <owl:Class rdf:about="http://purl.org/ontology/iomust/internet_of_things/ConnectedThing">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/iomust/internet_of_things/Thing"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/ontology/iomust/internet_of_things/hasConnection"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.org/ontology/iomust/internet_of_things/Connection"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/ontology/iomust/internet_of_things/Thing"/>
         <rdfs:comment>Any thing connected to a communication network.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.org/ontology/iomust/internet_of_things/Connection"/>
@@ -462,6 +464,7 @@
     <!-- http://purl.org/ontology/iomust/internet_of_things/Thing -->
 
     <owl:Class rdf:about="http://purl.org/ontology/iomust/internet_of_things/Thing">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/studio/device/Device"/>
         <rdfs:comment>Any physical object relevant from a user or application perspective.</rdfs:comment>
     </owl:Class>
     
@@ -526,14 +529,6 @@
     <!-- http://purl.org/ontology/iomust/internet_of_things/iomust/SmartMusicalThing -->
 
     <owl:Class rdf:about="http://purl.org/ontology/iomust/internet_of_things/iomust/SmartMusicalThing">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/iomust/internet_of_things/SmartThing"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing"/>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing"/>
         <rdfs:comment>A musical thing that is also a smart thing.</rdfs:comment>
     </owl:Class>
@@ -543,17 +538,6 @@
     <!-- http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment -->
 
     <owl:Class rdf:about="http://purl.org/ontology/iomust/internet_of_things/iomust/StageEquipment">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/co#Collection"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/co#elementOf"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/co#Collection"/>
         <rdfs:comment>A collection of musical things serving as equipment. The definition of collection can be extracted from external ontologies designed ad hoc for this, like the collection ontology by Ciccarese et al.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://purl.org/co#Collection"/>
@@ -564,14 +548,6 @@
     <!-- http://purl.org/ontology/iomust/internet_of_things/iomust/WearableMusicalThing -->
 
     <owl:Class rdf:about="http://purl.org/ontology/iomust/internet_of_things/iomust/WearableMusicalThing">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/ontology/iomust/internet_of_things/WearableThing"/>
-                    <rdf:Description rdf:about="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing"/>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/ontology/iomust/internet_of_things/iomust/MusicalThing"/>
         <rdfs:comment>A musical thing that is also wearable</rdfs:comment>
     </owl:Class>
@@ -612,6 +588,31 @@
         <rdfs:comment>The Agent class is the class of agents; things that do stuff. A well known sub-class is Person, representing people. Other kinds of agents include Organization and Group. The Agent class is useful in a few places in FOAF where Person would have been overly specific. For example, the IM chat ID properties such as jabberID are typically associated with people, but sometimes belong to software bots.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/spec/"/>
     </owl:Class>
+    <rdf:Description>
+        <owl:intersectionOf>
+            <rdf:Description/>
+        </owl:intersectionOf>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:intersectionOf>
+            <rdf:Description/>
+        </owl:intersectionOf>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:unionOf>
+            <rdf:Description/>
+        </owl:unionOf>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:intersectionOf>
+            <rdf:Description/>
+        </owl:intersectionOf>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:intersectionOf>
+            <rdf:Description/>
+        </owl:intersectionOf>
+    </rdf:Description>
     
 
 
